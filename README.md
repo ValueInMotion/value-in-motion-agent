@@ -9,7 +9,7 @@ Traditional CS health scores are often static and reactive. This framework appli
 Technical Execution
 Workflow Engine: n8n (visual orchestrator).
 
-Intelligence Layer: Claude 3.5 Sonnet (using a custom System Prompt grounded in CS logic).
+Intelligence Layer: Claude 4.5 Sonnet (using a custom System Prompt grounded in CS logic).
 
 Integrations: Google Sheets (Data Source) and Gmail (Automated Reporting).
 
