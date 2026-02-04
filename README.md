@@ -34,3 +34,5 @@ graph TD
 The agent successfully identified 75% Unused Capacity (Muda) and calculated an estimated $45,000/year in waste, providing an immediate strategic pivot for the CSM.
 ## Customer Success Management Activities
 ![Customer Success Lifecycle](CSM%20Activities%20Details.png)
+## Agentic Customer Success Operations — AI-Augmented Lifecycle
+https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_workflow.mmd
