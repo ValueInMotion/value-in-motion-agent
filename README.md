@@ -156,6 +156,10 @@ P10 --> P6
 
 Link (GitHub won't render iframes):
 https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_workflow.mmd
+## Implementation
+https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_implementation_guide.md
+## Guide
+https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_framework_guide.md
 
 ## Agentic Customer Success Operations — Mermaid Flowchart
 ```mermaid
