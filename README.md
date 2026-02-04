@@ -32,7 +32,46 @@ graph TD
 ```
 ## Real-World Impact
 The agent successfully identified 75% Unused Capacity (Muda) and calculated an estimated $45,000/year in waste, providing an immediate strategic pivot for the CSM.
+
 ## Customer Success Management Activities
 ![Customer Success Lifecycle](CSM%20Activities%20Details.png)
+
 ## Agentic Customer Success Operations — AI-Augmented Lifecycle
 https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_workflow.mmd
+
+## Agentic Customer Success Operations — Mermaid Flowchart
+```mermaid
+flowchart LR
+
+CI[Central Intelligence Layer]
+
+P1[Phase 1 - Automated Transition]
+P2[Phase 2 - Intelligent Discovery]
+P3[Phase 3 - AI Assisted Planning]
+P4[Phase 4 - Autonomous Activation]
+P8[Phase 8 - Automated Value Proof]
+P10[Phase 10 - Relationship Intelligence]
+P11[Phase 11 - Intelligent Churn Response]
+
+L1((Autonomous Orchestration))
+L2((Real-Time Observability))
+L3((Proactive Risk Management))
+
+EXP[AI-Driven Expansion Engine]
+
+CI --> P1
+P1 --> P2
+P2 --> P3
+P3 --> P4
+P4 --> P8
+P8 --> P10
+P10 --> P11
+
+CI --- L1
+CI --- L2
+CI --- L3
+
+P8 --> EXP
+EXP --> P10
+```
+
