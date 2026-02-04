@@ -1,13 +1,10 @@
 # Value-in-Motion™: The Agentic CS Operating System
-
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() [![Platform](https://img.shields.io/badge/platform-n8n%20%7C%20Claude-blue)]() [![License](https://img.shields.io/badge/license-Proprietary-orange)]()
 
 **Value-in-Motion™** is an event-driven, AI-augmented architecture that transforms Customer Success from a reactive support function into a scalable revenue engine. It operationalizes the "Agentic CS" model to automate **80% of administrative overhead** while driving Net Revenue Retention (NRR).
-
 ---
 
-## The Core Logic: Engineering Revenue
-
+## 1. The Philosophy: Engineering Revenue
 Traditional Health Scores are lagging indicators. This framework treats Customer Success as an engineering problem, applying **Lean Manufacturing Principles** to SaaS telemetry data to detect risks before they appear on a dashboard.
 
 | Lean Principle | In SaaS Terms | The Agentic Response |
@@ -17,9 +14,22 @@ Traditional Health Scores are lagging indicators. This framework treats Customer
 | **Muri (Overburden)** | High volume of support tickets/complaints. | **Auto-Escalate:** Agent correlates ticket spikes with renewal dates and alerts the Director of CS. |
 ---
 
-## System Architecture
+## 2. Tech Stack
+This framework utilizes a "Low-Code / High-Logic" stack designed for rapid enterprise deployment.
+- Orchestration: n8n (Workflow Automation)
+- Intelligence: Claude 3.5 Sonnet / 4.5 (Reasoning & Narrative Generation)
+- Data Layer: Snowflake / Google Sheets (Telemetry Source)
+- Delivery: Gmail / Slack / Slides API (Automated Reporting)
 
-This diagram represents the "Source Code" of the Agentic CS lifecycle—moving from manual touchpoints to autonomous loops.
+## 3. System Architecture
+The system moves beyond manual touchpoints into autonomous loops.
+Interaction Logic
+
+- ## Explore the Interactive Workflow Logic (Claude Artifact)
+  https://claude.ai/public/artifacts/f8b3874b-521a-4a13-a8c0-aa0e68f6463b
+
+- ## Get embed code
+  <iframe src="https://claude.site/public/artifacts/f8b3874b-521a-4a13-a8c0-aa0e68f6463b/embed" title="Claude Artifact" width="100%" height="600" frameborder="0" allow="clipboard-write" allowfullscreen></iframe>
 
 ```mermaid
 flowchart TB
@@ -51,10 +61,12 @@ flowchart TB
   AUTO --> HUMAN
   HUMAN -.-> INTEL
 ```
-View Full Interaction Logic > Click above to explore the interactive Claude Artifact demonstrating the comprehensive workflow.
-https://claude.site/public/artifacts/6327c6cb-62f8-4b6c-a007-3dd07bbd6681/embed
 
-<details> <summary>📂 Click to view the Full Mermaid Source Code</summary>
+- View Full Interaction Logic > Click above to explore the interactive Claude Artifact demonstrating the comprehensive workflow.
+  https://claude.site/public/artifacts/6327c6cb-62f8-4b6c-a007-3dd07bbd6681/embed
+  <details> <summary>📂 Click to view the Full Mermaid Source Code</summary>
+  
+```mermaid
 flowchart TB
   subgraph INTEL["🧠 AI Intelligence Layer"]
     direction LR
@@ -69,30 +81,34 @@ flowchart TB
   INTEL -.-> LOOP1
   AP1 --> LOOP1
 ```
+
 (Note: Full expansive code is available in agentic_cs_workflow.mmd)
 </details>
 
-## Tech Stack
-This framework is built on a "Low-Code / High-Logic" stack designed for rapid deployment in enterprise environments.
-Orchestration: n8n (Workflow Automation)
-Intelligence: Claude 3.5 Sonnet (Reasoning & Narrative Generation)
-Data Layer: Google Sheets / Snowflake (Telemetry Source)
-Presentation: Gmail / Slack / Slides API (Automated Reporting)
-  
-## Value-in-Motion-agent
+## 4. Real-World Impact: The "Agentic Audit"
+In a recent deployment, the Value-in-Motion agent identified 75% Unused Capacity (Muda) for a Tier-1 account.
+- Calculated Waste: ~$45,000/year.
+- Outcome: The agent automatically drafted a "Value Realization Roadmap," allowing the CSM to pivot the conversation from a "downsell risk" to a "re-deployment strategy" 6 months before the renewal date.
+
+## 5. Repository Structure
+- /workflows: Exported n8n JSON blueprints.
+- /prompts: System prompts for the Claude-based Reasoning Engine.
+- agentic_cs_workflow.mmd: Full Mermaid source code for the lifecycle diagram.
+
+## 6. License
+Distributed under the MIT License. See LICENSE for more information.
+
+## 7. Value-in-Motion-Agent
 An agentic Customer Success auditor that identifies Lean waste (Muda, Mura, Muri) and automates strategic account health reviews
 Value in Motion™: Agentic CS Audit Framework
 This repository demonstrates the codification of my proprietary Customer Success methodology into an automated, AI-driven diagnostic engine.
 
-The Core Problem
-Traditional CS health scores are often static and reactive. This framework applies Lean principles (Muda, Mura, Muri) to telemetry data to identify hidden churn risks and expansion opportunities before they hit the dashboard.
-
-Technical Execution
-Workflow Engine: n8n (visual orchestrator).
-
-Intelligence Layer: Claude 4.5 Sonnet (using a custom System Prompt grounded in CS logic).
-
-Integrations: Google Sheets (Data Source) and Gmail (Automated Reporting).
+- The Core Problem
+  Traditional CS health scores are often static and reactive. This framework applies Lean principles (Muda, Mura, Muri) to telemetry data to identify hidden churn risks and expansion opportunities before they hit the dashboard.
+- Technical Execution
+  Workflow Engine: n8n (visual orchestrator).
+- Intelligence Layer: Claude 4.5 Sonnet (using a custom System Prompt grounded in CS logic).
+  Integrations: Google Sheets (Data Source) and Gmail (Automated Reporting).
 
 Logic Blueprint
 ```mermaid
@@ -111,13 +127,11 @@ graph TD
     G1 --> I
     H1 --> I
 ```
-## Real-World Impact
-The agent successfully identified 75% Unused Capacity (Muda) and calculated an estimated $45,000/year in waste, providing an immediate strategic pivot for the CSM.
 
-## Customer Success Management Activities
+## 8. Customer Success Management Activities
 ![Customer Success Lifecycle](CSM%20Activities%20Details.png)
 
-## Customer Success Management Activities
+## 9. Customer Success Management Phases
 
 ```mermaid
 flowchart LR
@@ -152,16 +166,15 @@ P8 --> P6
 P10 --> P6
 ```
 
-## Claude Agentic Customer Success Operations — AI-Augmented Lifecycle
-
+## 10. Claude Agentic Customer Success Operations — AI-Augmented Lifecycle
 Link (GitHub won't render iframes):
 https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_workflow.mmd
-## Implementation
-https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_implementation_guide.md
-## Guide
-https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_framework_guide.md
+- ## Implementation
+  https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_implementation_guide.md
+- ## Guide
+- https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_framework_guide.md
 
-## Agentic Customer Success Operations — Mermaid Flowchart
+## 11. Agentic Customer Success Operations — Mermaid Flowchart
 ```mermaid
 flowchart LR
 
