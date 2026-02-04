@@ -52,8 +52,34 @@ flowchart TB
   AUTO --> HUMAN
   HUMAN -.-> INTEL
 ```
+View Full Interaction Logic > Click above to explore the interactive Claude Artifact demonstrating the comprehensive workflow.
+https://claude.site/public/artifacts/6327c6cb-62f8-4b6c-a007-3dd07bbd6681/embed
 
+<details> <summary>📂 Click to view the Full Mermaid Source Code</summary>
+flowchart TB
+  subgraph INTEL["🧠 AI Intelligence Layer"]
+    direction LR
+    ai_engine["AI Orchestration Engine"] --> ai_signals["Predictive Signals"]
+  end
+  subgraph AP1["⚡ Phase 1: Automated Transition"]
+    a1_1["🤖 Auto: Sales data ingestion"] --> a1_2["🤖 Auto: Account provisioning"]
+  end
+  subgraph LOOP1["🔄 Autonomous Orchestration"]
+    l1_1["🤖 Auto: Smart touchpoint scheduling"] --> l1_2["🤖 Auto: Meeting prep"]
+  end
+  INTEL -.-> LOOP1
+  AP1 --> LOOP1
+```
+(Note: Full expansive code is available in agentic_cs_workflow.mmd)
+</details>
 
+## Tech Stack
+This framework is built on a "Low-Code / High-Logic" stack designed for rapid deployment in enterprise environments.
+Orchestration: n8n (Workflow Automation)
+Intelligence: Claude 3.5 Sonnet (Reasoning & Narrative Generation)
+Data Layer: Google Sheets / Snowflake (Telemetry Source)
+Presentation: Gmail / Slack / Slides API (Automated Reporting)
+  
 ## Value-in-Motion-agent
 An agentic Customer Success auditor that identifies Lean waste (Muda, Mura, Muri) and automates strategic account health reviews
 Value in Motion™: Agentic CS Audit Framework
