@@ -6,7 +6,7 @@
 
 ---
 
-## 🧠 The Core Logic: Engineering Revenue
+## The Core Logic: Engineering Revenue
 
 Traditional Health Scores are lagging indicators. This framework treats Customer Success as an engineering problem, applying **Lean Manufacturing Principles** to SaaS telemetry data to detect risks before they appear on a dashboard.
 
@@ -17,7 +17,7 @@ Traditional Health Scores are lagging indicators. This framework treats Customer
 | **Muri (Overburden)** | High volume of support tickets/complaints. | **Auto-Escalate:** Agent correlates ticket spikes with renewal dates and alerts the Director of CS. |
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 This diagram represents the "Source Code" of the Agentic CS lifecycle—moving from manual touchpoints to autonomous loops.
 
@@ -118,7 +118,6 @@ The agent successfully identified 75% Unused Capacity (Muda) and calculated an e
 ![Customer Success Lifecycle](CSM%20Activities%20Details.png)
 
 ## Customer Success Management Activities
-![Customer Success Lifecycle](CSM%20Activities%20Details.png)
 
 ```mermaid
 flowchart LR
@@ -131,26 +130,18 @@ P4["4. Value Activation<br/>Onboarding<br/>Training & education<br/>FTTv<br/>Wor
 P8["8. Value Proof<br/>Insight presentation<br/>QBR<br/>Executive storytelling<br/>Value realization<br/>ROI RoSI"]
 P10["10. Relationship Capital<br/>Advocacy<br/>References<br/>Product feedback"]
 
-P1 --> P2
-P2 --> P3
-P3 --> P4
-P4 --> P8
-P8 --> P10
+P1 --> P2 --> P3 --> P4 --> P8 --> P10
 
 %% OPERATIONAL LOOP
 P5["5. Operational Orchestration<br/>Touchpoints<br/>Meetings and follow-ups<br/>Emails and chasing<br/>CRM hygiene<br/>Internal alignment<br/>Partner coordination"]
 P6["6. Observability and Signals<br/>Usage metrics<br/>Telemetry<br/>Health monitoring<br/>Customer feedback"]
 P7["7. Risk Control<br/>Risk prevention<br/>Risk playbooks<br/>Support and escalation"]
 
-P4 --> P5
-P5 --> P6
-P6 --> P7
-P7 --> P5
+P4 --> P5 --> P6 --> P7 --> P5
 
 %% RISK PATH
 RD{"Risk detected?"}
 P7 --> RD
-
 P11["11. Churn Handling<br/>Churn save<br/>Post-mortem"]
 
 RD -->|Yes| P11
@@ -159,24 +150,26 @@ RD -->|No| P5
 %% FEEDBACK
 P8 --> P6
 P10 --> P6
----
+```
 
 ## Claude Agentic Customer Success Operations — AI-Augmented Lifecycle
+
+Link (GitHub won't render iframes):
 https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_workflow.mmd
-<iframe src="https://claude.site/public/artifacts/6327c6cb-62f8-4b6c-a007-3dd07bbd6681/embed" title="Claude Artifact" width="100%" height="600" frameborder="0" allow="clipboard-write" allowfullscreen></iframe>
 
 ## Agentic Customer Success Operations — Mermaid Flowchart
+```mermaid
 flowchart LR
 
 CI[Central Intelligence Layer]
 
-P1[Phase 1 - Automated Transition]
-P2[Phase 2 - Intelligent Discovery]
-P3[Phase 3 - AI Assisted Planning]
-P4[Phase 4 - Autonomous Activation]
-P8[Phase 8 - Automated Value Proof]
-P10[Phase 10 - Relationship Intelligence]
-P11[Phase 11 - Intelligent Churn Response]
+A1[Phase 1 - Automated Transition]
+A2[Phase 2 - Intelligent Discovery]
+A3[Phase 3 - AI Assisted Planning]
+A4[Phase 4 - Autonomous Activation]
+A8[Phase 8 - Automated Value Proof]
+A10[Phase 10 - Relationship Intelligence]
+A11[Phase 11 - Intelligent Churn Response]
 
 L1((Autonomous Orchestration))
 L2((Real-Time Observability))
@@ -184,19 +177,20 @@ L3((Proactive Risk Management))
 
 EXP[AI-Driven Expansion Engine]
 
-CI --> P1
-P1 --> P2
-P2 --> P3
-P3 --> P4
-P4 --> P8
-P8 --> P10
-P10 --> P11
+CI --> A1
+A1 --> A2
+A2 --> A3
+A3 --> A4
+A4 --> A8
+A8 --> A10
+A10 --> A11
 
 CI --- L1
 CI --- L2
 CI --- L3
 
-P8 --> EXP
-EXP --> P10
+A8 --> EXP
+EXP --> A11
 ```
+
 
