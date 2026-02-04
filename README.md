@@ -36,8 +36,9 @@ The agent successfully identified 75% Unused Capacity (Muda) and calculated an e
 ## Customer Success Management Activities
 ![Customer Success Lifecycle](CSM%20Activities%20Details.png)
 
-## Agentic Customer Success Operations — AI-Augmented Lifecycle
+## Claude Agentic Customer Success Operations — AI-Augmented Lifecycle
 https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_workflow.mmd
+<iframe src="https://claude.site/public/artifacts/6327c6cb-62f8-4b6c-a007-3dd07bbd6681/embed" title="Claude Artifact" width="100%" height="600" frameborder="0" allow="clipboard-write" allowfullscreen></iframe>
 
 ## Agentic Customer Success Operations — Mermaid Flowchart
 ```mermaid
