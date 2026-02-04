@@ -15,7 +15,6 @@ Traditional Health Scores are lagging indicators. This framework treats Customer
 | **Muda (Waste)** | Paying for unused licenses or features. | **Auto-Audit:** Agent identifies shelfware and drafts a "License Optimization Plan" to save the renewal. |
 | **Mura (Inconsistency)** | Erratic login patterns or "spiky" adoption. | **Auto-Nudge:** Agent detects usage gaps and triggers targeted training workflows. |
 | **Muri (Overburden)** | High volume of support tickets/complaints. | **Auto-Escalate:** Agent correlates ticket spikes with renewal dates and alerts the Director of CS. |
-
 ---
 
 ## 🏗️ System Architecture
@@ -118,12 +117,55 @@ The agent successfully identified 75% Unused Capacity (Muda) and calculated an e
 ## Customer Success Management Activities
 ![Customer Success Lifecycle](CSM%20Activities%20Details.png)
 
+## Customer Success Management Activities
+![Customer Success Lifecycle](CSM%20Activities%20Details.png)
+
+```mermaid
+flowchart LR
+
+%% MAIN LINEAR PHASES
+P1["1. Transition<br/>Sales handoff<br/>Account activation<br/>Commercial awareness"]
+P2["2. Discovery & Assessment<br/>Alignment questionnaire<br/>Maturity assessment<br/>Use-case discovery"]
+P3["3. Executive Alignment & CS Plan<br/>Internal review<br/>Kickoff & stakeholder mapping<br/>Mutual expectations<br/>CS plan co-creation"]
+P4["4. Value Activation<br/>Onboarding<br/>Training & education<br/>FTTv<br/>Workflow embedding<br/>TTV acceleration<br/>Adoption campaigns<br/>Playbook execution"]
+P8["8. Value Proof<br/>Insight presentation<br/>QBR<br/>Executive storytelling<br/>Value realization<br/>ROI RoSI"]
+P10["10. Relationship Capital<br/>Advocacy<br/>References<br/>Product feedback"]
+
+P1 --> P2
+P2 --> P3
+P3 --> P4
+P4 --> P8
+P8 --> P10
+
+%% OPERATIONAL LOOP
+P5["5. Operational Orchestration<br/>Touchpoints<br/>Meetings and follow-ups<br/>Emails and chasing<br/>CRM hygiene<br/>Internal alignment<br/>Partner coordination"]
+P6["6. Observability and Signals<br/>Usage metrics<br/>Telemetry<br/>Health monitoring<br/>Customer feedback"]
+P7["7. Risk Control<br/>Risk prevention<br/>Risk playbooks<br/>Support and escalation"]
+
+P4 --> P5
+P5 --> P6
+P6 --> P7
+P7 --> P5
+
+%% RISK PATH
+RD{"Risk detected?"}
+P7 --> RD
+
+P11["11. Churn Handling<br/>Churn save<br/>Post-mortem"]
+
+RD -->|Yes| P11
+RD -->|No| P5
+
+%% FEEDBACK
+P8 --> P6
+P10 --> P6
+---
+
 ## Claude Agentic Customer Success Operations — AI-Augmented Lifecycle
 https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_workflow.mmd
 <iframe src="https://claude.site/public/artifacts/6327c6cb-62f8-4b6c-a007-3dd07bbd6681/embed" title="Claude Artifact" width="100%" height="600" frameborder="0" allow="clipboard-write" allowfullscreen></iframe>
 
 ## Agentic Customer Success Operations — Mermaid Flowchart
-```mermaid
 flowchart LR
 
 CI[Central Intelligence Layer]
