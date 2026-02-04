@@ -1,0 +1,209 @@
+flowchart TB
+  %% Agentic Customer Success Operations — AI-Augmented Lifecycle
+  
+  %% =========================
+  %% INTELLIGENCE LAYER (Central Orchestration)
+  %% =========================
+  subgraph INTEL["🧠 AI Intelligence Layer"]
+    direction LR
+    ai_engine["AI Orchestration Engine"]
+    ai_signals["Predictive Signals"]
+    ai_insights["Automated Insights"]
+    ai_triggers["Event Triggers"]
+    
+    ai_engine --> ai_signals
+    ai_engine --> ai_insights
+    ai_engine --> ai_triggers
+  end
+  
+  %% =========================
+  %% AUTOMATED PHASES (Primary Flow)
+  %% =========================
+  
+  subgraph AP1["⚡ Phase 1: Automated Transition"]
+    direction TB
+    a1_1["🤖 Auto: Sales data ingestion"]
+    a1_2["🤖 Auto: Account provisioning"]
+    a1_3["🤖 Auto: Contract parsing & alerts"]
+    a1_4["👤 Human: Strategic handoff review"]
+    
+    a1_1 --> a1_2 --> a1_3 --> a1_4
+  end
+  
+  subgraph AP2["⚡ Phase 2: Intelligent Discovery"]
+    direction TB
+    a2_1["🤖 Auto: Pre-call research (AI)"]
+    a2_2["🤖 Auto: Send alignment survey"]
+    a2_3["🤖 Auto: Maturity scoring (AI)"]
+    a2_4["🤖 Auto: Use-case extraction (NLP)"]
+    a2_5["👤 Human: Discovery call & validation"]
+    
+    a2_1 --> a2_2 --> a2_3 --> a2_4 --> a2_5
+  end
+  
+  subgraph AP3["⚡ Phase 3: AI-Assisted Planning"]
+    direction TB
+    a3_1["🤖 Auto: Stakeholder mapping (LinkedIn)"]
+    a3_2["🤖 Auto: Success plan template gen"]
+    a3_3["👤 Human: Executive kickoff"]
+    a3_4["👤 Human: Co-create CS plan"]
+    a3_5["🤖 Auto: Plan tracking setup"]
+    
+    a3_1 --> a3_2 --> a3_3 --> a3_4 --> a3_5
+  end
+  
+  subgraph AP4["⚡ Phase 4: Autonomous Activation"]
+    direction TB
+    a4_1["🤖 Auto: Onboarding workflows"]
+    a4_2["🤖 Auto: Training scheduling"]
+    a4_3["🤖 Auto: Progress tracking"]
+    a4_4["🤖 Auto: FTV milestone detection"]
+    a4_5["🤖 Auto: Adoption nudges (email/in-app)"]
+    a4_6["👤 Human: High-touch check-ins"]
+    a4_7["🤖 Auto: Playbook triggers"]
+    
+    a4_1 --> a4_2 --> a4_3 --> a4_4
+    a4_5 --> a4_6
+    a4_4 --> a4_7
+  end
+  
+  subgraph AP8["⚡ Phase 8: Automated Value Proof"]
+    direction TB
+    a8_1["🤖 Auto: Usage data aggregation"]
+    a8_2["🤖 Auto: ROI calculation (AI)"]
+    a8_3["🤖 Auto: QBR deck generation"]
+    a8_4["🤖 Auto: Value story creation (AI)"]
+    a8_5["👤 Human: QBR presentation"]
+    a8_6["🤖 Auto: Action items tracking"]
+    
+    a8_1 --> a8_2 --> a8_3 --> a8_4 --> a8_5 --> a8_6
+  end
+  
+  subgraph AP10["⚡ Phase 10: Relationship Intelligence"]
+    direction TB
+    a10_1["🤖 Auto: Advocacy opportunity detection"]
+    a10_2["🤖 Auto: Reference request routing"]
+    a10_3["🤖 Auto: Feedback collection & analysis"]
+    a10_4["👤 Human: Strategic relationship mgmt"]
+    
+    a10_1 --> a10_2 --> a10_3 --> a10_4
+  end
+  
+  %% Main flow progression
+  AP1 --> AP2 --> AP3 --> AP4 --> AP8 --> AP10
+  
+  %% =========================
+  %% CONTINUOUS LOOPS (AI-Driven)
+  %% =========================
+  
+  subgraph LOOP1["🔄 Autonomous Orchestration"]
+    direction TB
+    l1_1["🤖 Auto: Smart touchpoint scheduling"]
+    l1_2["🤖 Auto: Meeting prep (AI briefs)"]
+    l1_3["🤖 Auto: Follow-up automation"]
+    l1_4["🤖 Auto: CRM auto-update"]
+    l1_5["🤖 Auto: Internal sync notifications"]
+    l1_6["🤖 Auto: Partner workflow triggers"]
+    
+    l1_1 --> l1_2 --> l1_3 --> l1_4 --> l1_5 --> l1_6
+  end
+  
+  subgraph LOOP2["📊 Real-Time Observability"]
+    direction TB
+    l2_1["🤖 Auto: Usage monitoring dashboard"]
+    l2_2["🤖 Auto: Telemetry alerts"]
+    l2_3["🤖 Auto: Health score calculation"]
+    l2_4["🤖 Auto: Sentiment analysis (NLP)"]
+    l2_5["🤖 Auto: Anomaly detection (ML)"]
+    
+    l2_1 --> l2_2 --> l2_3 --> l2_4 --> l2_5
+  end
+  
+  subgraph LOOP3["⚠️ Proactive Risk Management"]
+    direction TB
+    l3_1["🤖 Auto: Churn prediction (ML)"]
+    l3_2["🤖 Auto: Risk playbook execution"]
+    l3_3["🤖 Auto: Escalation routing"]
+    l3_4["👤 Human: Critical issue resolution"]
+    l3_5["🤖 Auto: Recovery tracking"]
+    
+    l3_1 --> l3_2 --> l3_3 --> l3_4 --> l3_5
+  end
+  
+  %% Loop interconnections
+  LOOP1 --> LOOP2
+  LOOP2 --> LOOP3
+  LOOP3 --> LOOP1
+  
+  %% =========================
+  %% EXCEPTION HANDLING
+  %% =========================
+  
+  risk_critical["🚨 Critical Risk Alert"]:::critical
+  
+  subgraph EXC["⚡ Phase 11: Intelligent Churn Response"]
+    direction TB
+    e1["🤖 Auto: Churn risk assessment"]
+    e2["🤖 Auto: Win-back playbook trigger"]
+    e3["👤 Human: Executive save intervention"]
+    e4["🤖 Auto: Post-mortem analysis (AI)"]
+    e5["🤖 Auto: Knowledge base update"]
+    
+    e1 --> e2 --> e3 --> e4 --> e5
+  end
+  
+  LOOP3 --> risk_critical --> EXC
+  
+  %% =========================
+  %% AI INTELLIGENCE CONNECTIONS
+  %% =========================
+  
+  INTEL -.orchestrates.-> LOOP1
+  INTEL -.monitors.-> LOOP2
+  INTEL -.predicts.-> LOOP3
+  INTEL -.optimizes.-> AP4
+  INTEL -.generates.-> AP8
+  
+  AP3 -.feeds data.-> INTEL
+  AP4 -.feeds signals.-> INTEL
+  LOOP2 -.feeds insights.-> INTEL
+  
+  %% =========================
+  %% EXPANSION ENGINE
+  %% =========================
+  
+  subgraph EXP["💰 AI-Driven Expansion"]
+    direction TB
+    exp1["🤖 Auto: Upsell opportunity scoring"]
+    exp2["🤖 Auto: Cross-sell recommendations"]
+    exp3["🤖 Auto: Expansion alert to AE"]
+    exp4["👤 Human: Strategic expansion discussion"]
+    
+    exp1 --> exp2 --> exp3 --> exp4
+  end
+  
+  AP8 --> EXP
+  AP10 --> EXP
+  INTEL -.identifies.-> EXP
+  
+  %% =========================
+  %% STYLING
+  %% =========================
+  
+  classDef autoPhase fill:#4CAF50,stroke:#2E7D32,color:#fff,stroke-width:2px;
+  classDef humanPhase fill:#2196F3,stroke:#1565C0,color:#fff,stroke-width:2px;
+  classDef intelligence fill:#9C27B0,stroke:#6A1B9A,color:#fff,stroke-width:3px;
+  classDef loop fill:#FF9800,stroke:#E65100,color:#fff,stroke-width:2px;
+  classDef observe fill:#00BCD4,stroke:#006064,color:#fff,stroke-width:2px;
+  classDef risk fill:#F44336,stroke:#B71C1C,color:#fff,stroke-width:2px;
+  classDef critical fill:#D32F2F,stroke:#B71C1C,color:#fff,stroke-width:3px;
+  classDef expansion fill:#4CAF50,stroke:#1B5E20,color:#fff,stroke-width:2px;
+  
+  class AP1,AP2,AP3,AP4,AP8,AP10 autoPhase;
+  class INTEL intelligence;
+  class LOOP1 loop;
+  class LOOP2 observe;
+  class LOOP3 risk;
+  class risk_critical critical;
+  class EXC risk;
+  class EXP expansion;
