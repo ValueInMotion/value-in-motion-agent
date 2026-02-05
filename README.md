@@ -63,6 +63,78 @@ P10 --> P6
   
 ![Customer Success Lifecycle](CSM%20Activities%20Details.png)
 
+- Customer Success Management Activities - Mermaid Graph
+```mermaid
+graph LR
+    %% Main Sequential Phases
+    P1["Phase 1: Transition<br/>────────────<br/>1. Sales handoff<br/>2. Account activation<br/>3. Commercial awareness"]
+    
+    P2["Phase 2: Discovery & Assessment<br/>────────────<br/>4. Alignment questionnaire<br/>5. Maturity assessment<br/>6. Use-case discovery"]
+    
+    P3["Phase 3: Executive Alignment & CS Plan<br/>────────────<br/>8. Internal review<br/>9. Kickoff & stakeholder mapping<br/>10. Mutual expectations<br/>11. CS plan co-creation"]
+    
+    P4["Phase 4: Value Activation<br/>────────────<br/>12. Onboarding<br/>13. Training<br/>14. Education<br/>15. FTTV<br/>16. Workflow embedding<br/>17. TTV acceleration<br/>18. Adoption campaigns<br/>19. New features intro<br/>20. Playbook execution"]
+    
+    P8["Phase 8: Value Proof<br/>────────────<br/>33. Presentation<br/>34. QBR<br/>35. Executive storytelling<br/>36. Value realization<br/>37. Value quantification"]
+    
+    P10["Phase 10: Relationship Capital<br/>────────────<br/>42. Advocacy<br/>43. References<br/>44. Product feedback loop"]
+    
+    %% Continuous Processes
+    OPS["Phase 5: Operational Orchestration<br/>────────────<br/>21. Touchpoints<br/>22. Meeting prep & follow-ups<br/>23. Emails and Chasing<br/>24. Documentation and CRM<br/>25. Internal alignment<br/>26. Partner and SI coordination"]
+    
+    OBS["Phase 6: Observability & Signals<br/>────────────<br/>27. Usage and Metrics review<br/>28. Telemetry, active users<br/>29. Health monitoring<br/>30. Feedback and VoC"]
+    
+    RISK["Phase 7: Risk Control<br/>────────────<br/>31. Risk prevention<br/>32. Risk playbooks<br/>33. Support & escalation"]
+    
+    %% Exception Handling
+    DETECT{"Risk<br/>Detected?"}
+    P11["Phase 11: Churn Handling<br/>────────────<br/>45. Churn save<br/>46. Post-mortem"]
+    
+    %% Main Flow
+    P1 --> P2
+    P2 --> P3
+    P3 --> P4
+    P4 --> P8
+    P8 --> P10
+    
+    %% Continuous Process Interactions
+    P3 -.-> OBS
+    P4 --> OBS
+    
+    OBS <--> OPS
+    OBS <--> RISK
+    OPS <--> RISK
+    
+    %% Risk Detection Flow
+    RISK --> DETECT
+    DETECT -->|Yes| P11
+    DETECT -.->|No| OBS
+    
+    %% Styling
+    classDef transition fill:#FF9966,stroke:#333,stroke-width:2px,color:#000
+    classDef discovery fill:#4A90D9,stroke:#333,stroke-width:2px,color:#fff
+    classDef alignment fill:#339999,stroke:#333,stroke-width:2px,color:#fff
+    classDef activation fill:#669966,stroke:#333,stroke-width:2px,color:#fff
+    classDef proof fill:#669966,stroke:#333,stroke-width:2px,color:#fff
+    classDef relationship fill:#5A7FA6,stroke:#333,stroke-width:2px,color:#fff
+    classDef operational fill:#FF9966,stroke:#333,stroke-width:2px,color:#000
+    classDef observability fill:#4A90D9,stroke:#333,stroke-width:2px,color:#fff
+    classDef risk fill:#CC4444,stroke:#333,stroke-width:2px,color:#fff
+    classDef churn fill:#E6E6E6,stroke:#333,stroke-width:2px,color:#000
+    classDef decision fill:#CC4444,stroke:#333,stroke-width:3px,color:#fff
+    
+    class P1 transition
+    class P2 discovery
+    class P3 alignment
+    class P4 activation
+    class P8 proof
+    class P10 relationship
+    class OPS operational
+    class OBS observability
+    class RISK risk
+    class P11 churn
+    class DETECT decision
+```
 
 # III. Technical Architecture (The "What")
 
@@ -244,13 +316,110 @@ EXP --> A11
 
   Distributed under the MIT License. See LICENSE for more information.
 
-
-
-
-
-
-
-
+```mermaid
+graph TB
+    subgraph Phase1["Phase 1 - Transition"]
+        A1["1. Sales handoff"]
+        A2["2. Account activation"]
+        A3["3. Commercial awareness"]
+    end
+    
+    subgraph Phase2["Phase 2 - Discovery & Assessment"]
+        B1["4. Alignment questionnaire"]
+        B2["5. Maturity assessment"]
+        B3["6. Use-case discovery"]
+    end
+    
+    subgraph Phase3["Phase 3 - Executive Alignment & CS Plan"]
+        C1["8. Internal review"]
+        C2["9. Kickoff & stakeholder mapping"]
+        C3["10. Mutual expectations"]
+        C4["11. CS plan co-creation"]
+    end
+    
+    subgraph Phase4["Phase 4 - Value Activation"]
+        D1["12. Onboarding"]
+        D2["13. Training"]
+        D3["14. Education"]
+        D4["15. FTTV"]
+        D5["16. Workflow embedding"]
+        D6["17. TTV acceleration"]
+        D7["18. Adoption campaigns"]
+        D8["19. New features intro"]
+        D9["20. Playbook execution"]
+    end
+    
+    subgraph Phase8["Phase 8 - Value Proof"]
+        E1["33. Presentation (insight sharing)"]
+        E2["34. QBR (formal value review)"]
+        E3["35. Executive storytelling (business narrative)"]
+        E4["36. Value realization (outcomes shown)"]
+        E5["37. Value quantification (ROI / RoSI)"]
+    end
+    
+    subgraph Phase10["Phase 10 - Relationship Capital"]
+        F1["42. Advocacy"]
+        F2["43. References"]
+        F3["44. Product feedback loop"]
+    end
+    
+    subgraph Operational["Phase 5 - Operational Orchestration ∞"]
+        G1["21. Touchpoints (regular interactions)"]
+        G2["22. Meeting Preparation & Follow-ups (drive actions)"]
+        G3["23. Emails / Chasing (follow-through)"]
+        G4["24. Documentation / CRM hygiene (systems of record)"]
+        G5["25. Internal Alignment (sync internal teams)"]
+        G6["26. Partner / SI coordination (ecosystem work)"]
+    end
+    
+    subgraph Observability["Phase 6 - Observability & Signals ∞"]
+        H1["27. Usage / Metrics Review"]
+        H2["22. Telemetry, active users, frequency"]
+        H3["28. Health Monitoring (status indicators)"]
+        H4["29. Feedback / VoC (customer voice)"]
+    end
+    
+    subgraph Risk["Phase 7 - Risk Control ∞"]
+        I1["30. Risk Prevention (anticipation, early signals)"]
+        I2["31. Risk playbooks (standard responses)"]
+        I3["32. Support & Escalation (issue resolution)"]
+    end
+    
+    subgraph Phase11["Phase 11 - Churn Handling (exception)"]
+        J1["45. Churn save"]
+        J2["46. Post-mortem"]
+    end
+    
+    RiskDetected["Risk Detected"]
+    
+    Phase1 --> Phase2
+    Phase2 --> Phase3
+    Phase3 --> Phase4
+    Phase4 --> Phase8
+    Phase8 --> Phase10
+    
+    Phase3 -.-> Observability
+    Phase4 --> Observability
+    
+    Observability <--> Operational
+    Observability <--> Risk
+    Operational <--> Risk
+    
+    Risk -.-> RiskDetected
+    RiskDetected -.-> Phase11
+    
+    style Phase1 fill:#ff9966
+    style Phase2 fill:#4a90d9
+    style Phase3 fill:#339999
+    style Phase4 fill:#669966
+    style Phase8 fill:#669966
+    style Phase10 fill:#5a7fa6
+    style Operational fill:#ff9966
+    style Observability fill:#4a90d9
+    style Risk fill:#cc4444
+    style Phase11 fill:#e6e6e6
+    style RiskDetected fill:#cc4444
+```
 
 
 
