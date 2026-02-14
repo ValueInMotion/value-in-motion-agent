@@ -173,6 +173,41 @@ flowchart TB
 - **Observability**: LangSmith - For tracing agent thought processes and calculating token costs per account.
 - **Data Source**: Salesforce / Planhat / Snowflake.)
 
+# IV. Repository Structure
+The repository is structured to support enterprise-grade software engineering practices (Unit Testing, Evals, CI/CD).
+
+value-in-motion-agent/
+├── src/
+│   ├── graph/
+│   │   ├── __init__.py
+│   │   ├── state.py           # Defines the AccountState (TypedDict)
+│   │   ├── nodes.py           # Core logic (Audit Node, Diagnostic Node)
+│   │   ├── edges.py           # Conditional logic (Gates and Routers)
+│   │   └── compiled_graph.py  # The LangGraph entry point
+│   ├── tools/
+│   │   ├── crm_tools.py       # Salesforce/HubSpot connectors
+│   │   ├── email_tools.py     # Draft generation
+│   │   └── data_tools.py      # Telemetry analysis (Pandas/SQL)
+│   └── prompts/
+│       ├── auditor_prompt.yaml
+│       └── strategist_prompt.yaml
+├── tests/
+│   ├── unit/                  # Function tests
+│   └── integration/           # Full graph run tests
+├── docs/
+│   ├── architecture.mmd
+│   └── setup_guide.md
+├── requirements.txt
+└── .env.example
+
+# V. Observability & Evals (LangSmith)
+We treat the agent as a product. Every run is traced in LangSmith to ensure reliability.
+
+## Key Metrics Monitored:
+1. **Handoff Audit Accuracy**: Did the agent correctly identify missing contract fields?
+2. **Risk hallucination**: Did the agent flag a risk that didn't exist? (Regression testing).
+3. **Draft Safety**: Ensures no email drafts contain unauthorized pricing commitments.
+
 ## 6. System Architecture
 - Purpose: Use the Mermaid diagrams here. Show the "Autonomous Loops" and how data flows through the Intelligence Layer.
   The system moves beyond manual touchpoints into autonomous loops.
