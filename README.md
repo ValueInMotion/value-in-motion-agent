@@ -20,7 +20,7 @@ We apply **Lean Principles** to SaaS telemetry to identify "waste" Muda before i
 | **Muri (Overburden)** | High volume of support tickets/complaints. | **Auto-Escalate:** Agent correlates ticket spikes with renewal dates and alerts the Director of CS. |
 ---
 
-# II. Strategy & Methodology (The "How")
+# II. Domain Logic (The "Map")
 
 ## 3. Customer Success Management Lifecycle
 The agent operates against a strict map of the customer journey. It does not "hallucinate" random actions; it executes the specific requirements of each phase defined in the state machine.
@@ -44,85 +44,14 @@ flowchart LR
     RD -->|No| P5
  ```   
   
+(Refer to docs/csm_activities_map.mmd for the full 44-step detailed activity breakdown)
 
-(Refer to docs/csm_activities_map.mmd for the full 45-step detailed activity breakdown)
+# III. Technical Architecture (The "Engine")
 
-## 4. Customer Success Management Steps
-- Purpose: List the specific tasks (e.g., QBRs, Health Checks) that are being disrupted/augmented by the agent.
-  
-![Customer Success Lifecycle](CSM%20Activities%20Details.png)
+## 4. Customer Success Stateful Orchestration
 
-```mermaid
-flowchart TB
-    %% ==================================================================================
-    %% 1. STYLING & CLASSES
-    %% ==================================================================================
-    classDef spine fill:#f0f9ff,stroke:#0284c7,stroke-width:2px,color:#0c4a6e
-    classDef os fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,stroke-dasharray: 5 5,color:#581c87
-    classDef risk fill:#fef2f2,stroke:#dc2626,stroke-width:2px,color:#7f1d1d
-    classDef churn fill:#f3f4f6,stroke:#4b5563,stroke-width:1px,color:#1f2937
-    classDef outcome fill:#15803d,stroke:none,color:#fff,font-weight:bold,rx:5,ry:5
+This system moves beyond simple "Trigger -> Action" automation. It uses LangGraph to implement a State Machine. The agent has a "Long-Term Memory" (State) for each account and persists context across days or weeks.
 
-    %% ==================================================================================
-    %% 2. THE LINEAR SPINE (The Journey)
-    %% ==================================================================================
-    subgraph Journey ["🚀 The Value-in-Motion™ Journey"]
-        direction TB
-
-        %% PHASE 1
-        P1["<b>Phase 1: Internal Transition</b><br/><i>Goal: Knowledge Transfer</i><hr/>1. Audit Sales Docs<br/>2. Map Engagement Details<br/>3. Handoff Meeting<br/>4. Technical Activation"]:::spine
-        O1(Outcome: Zero-friction Handoff):::outcome
-        P1 --> O1
-
-        %% PHASE 2
-        P2["<b>Phase 2: PSP Diagnostic</b><br/><i>Goal: Success-Ready vs At-Risk</i><hr/>5. Run PSP Diagnostic<br/>6. Pain & Champion Check<br/>7. Red Flag Resolution<br/>8. Draft Success Plan (CSP)"]:::spine
-        O2(Outcome: Risk Prevention):::outcome
-        P2 --> O2
-
-        %% PHASE 3
-        P3["<b>Phase 3: Customer Kickoff</b><br/><i>Goal: Alignment & Roadmap</i><hr/>9. Pre-Alignment Questionnaire<br/>10. Mutual Success Agreement<br/>11. Define FTTV Milestone<br/>12. Confirm Cadence"]:::spine
-        O3(Outcome: Mutual Commitment):::outcome
-        P3 --> O3
-
-        %% PHASE 4
-        P4["<b>Phase 4: Value Activation</b><br/><i>Goal: Adoption & FTTV</i><hr/>13. Role-Based Onboarding<br/>14. Monitor Usage Gaps<br/>15. Precision Campaigns<br/>16. Workflow Embedding<br/>17. Value Acceleration Pivot"]:::spine
-        O4(Outcome: TVRV & Adoption):::outcome
-        P4 --> O4
-
-        %% PHASE 8
-        P8["<b>Phase 8: Value Realization</b><br/><i>Goal: ROI & Buy-in</i><hr/>30. Value Quantification<br/>31. Executive Business Reviews<br/>32. Executive Storytelling<br/>33. Maturity Mapping"]:::spine
-        O8(Outcome: Verified ROI):::outcome
-        P8 --> O8
-
-        %% PHASE 9
-        P9["<b>Phase 9: Growth & Retention</b><br/><i>Goal: Renew & Expand</i><hr/>34. Expansion Business Case<br/>35. Early Renewal Strategy<br/>36. Upsell/Cross-sell Exec<br/>37. Multi-threading"]:::spine
-        O9(Outcome: NRR Expansion):::outcome
-        P9 --> O9
-
-        %% PHASE 10
-        P10["<b>Phase 10: Advocacy</b><br/><i>Goal: Product Partners</i><hr/>38. CAB<br/>39. Reference Building<br/>40. Third-Party Advocacy<br/>41. Strategic Product Loop"]:::spine
-        O10(Outcome: Brand Promoters):::outcome
-        P10 --> O10
-    end
-
-    %% ==================================================================================
-    %% 3. THE AGENTIC OS (The Brain)
-    %% ==================================================================================
-    subgraph OS ["🧠 The Agentic OS (Always-On)"]
-        direction TB
-        
-        P5["<b>Phase 5: Orchestration</b><br/><i>Goal: Hygiene & Alignment</i><hr/>18. Strategic Touchpoints<br/>19. Auto-Follow-Up<br/>20. Ecosystem Alignment<br/>21. Meeting Efficacy<br/>22. CRM Hygiene"]:::os
-
-        P6["<b>Phase 6: Observability</b><br/><i>Goal: Anticipate Needs</i><hr/>23. Leading Indicators<br/>24. UX Analytics<br/>25. Health Score Calibration<br/>26. Sentiment & VoC"]:::os
-
-        P7["<b>Phase 7: Risk Mitigation</b><br/><i>Goal: Neutralize Risks</i><hr/>27. Early Warning System<br/>28. Risk Playbooks<br/>29. Escalation Mgmt"]:::risk
-    end
-
-
- ```   
-
-
-- Customer Success Management Activities - Mermaid Graph
 ```mermaid
 graph LR
     %% Main Sequential Phases
@@ -195,16 +124,54 @@ graph LR
     class DETECT decision
 ```
 
-# III. Technical Architecture (The "What")
+# Architecture Layers
+
+1. **Experience Layer**: Human interaction via Slack, Email, and CRM (Salesforce/Planhat).
+2. **Agent Layer** (LangGraph): The runtime brain. Handles branching, loops, and "Human-in-the-loop" gates.
+3. **Engineering Layer** (LangSmith): Control plane for tracing execution, debugging agent reasoning, and running regression tests.
+
+```mermaid
+flowchart TB
+    subgraph Memory ["💾 Persistence Layer (Checkpointers)"]
+        State["Account State<br/>(Phase, Risk Score, Missing Fields)"]
+    end
+
+    Start((Start)) --> Router{Phase Router}
+
+    %% PHASE 1: TRANSITION
+    Router -->|Phase 1| P1[Node: Handoff Audit]
+    P1 --> G1{Gate: Data Ready?}
+    G1 -- No --> L1[Loop: Fetch Missing Anchors]
+    L1 --> P1
+    G1 -- Yes --> P1_Exit[Update State: Ready for Phase 2]
+
+    %% PHASE 2: DIAGNOSTIC
+    P1_Exit --> P2[Node: Diagnostic Agent]
+    P2 --> Q1[Task: Stakeholder Mapping]
+    P2 --> Q2[Task: Pain Metric Check]
+    Q1 & Q2 --> Risk{Risk Detected?}
+    
+    Risk -- Yes --> Escalate[Node: Draft Risk Mitigation Plan]
+    Risk -- No --> CSP[Node: Draft Success Plan]
+
+    %% PHASE 4: VELOCITY
+    CSP --> P4[Node: Velocity Sensors]
+    P4 --> S1[Check: TTV Metrics]
+    P4 --> S2[Check: License Utilization]
+    
+    S1 & S2 --> NBA[Node: Next Best Action Queue]
+    
+    %% HUMAN INTERVENTION
+    Escalate -.-> Human((👤 Human Approval))
+    Human -->|Approve| Action[Execute Mitigation]
+    Human -->|Reject| Replan[Re-Reason Strategy]
+```
 
 ## 5. Tech Stack
-- Purpose: List n8n, Claude 4.5, Snowflake, etc. Developers/Ops need to know the requirements upfront.
-  
-This framework utilizes a "Low-Code / High-Logic" stack designed for rapid enterprise deployment.
-- Orchestration: n8n (Workflow Automation)
-- Intelligence: Claude 3.5 Sonnet / 4.5 (Reasoning & Narrative Generation)
-- Data Layer: Snowflake / Google Sheets (Telemetry Source)
-- Delivery: Gmail / Slack / Slides API (Automated Reporting)
+- **Orchestration**: LangGraph (Python) - Replaces rigid n8n workflows with cyclic graphs.
+- **LLM**: Claude 3.5 Sonnet / GPT-4o - Powered by LangChain.
+- **Observability**: LangSmith - For tracing agent thought processes and calculating token costs per account.
+- **Data Source**: Salesforce / Planhat / Snowflake.)
 
 ## 6. System Architecture
 - Purpose: Use the Mermaid diagrams here. Show the "Autonomous Loops" and how data flows through the Intelligence Layer.
