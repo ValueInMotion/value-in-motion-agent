@@ -1,5 +1,5 @@
-# Value-in-Motion™: The Agentic CS Operating System
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() [![Platform](https://img.shields.io/badge/platform-n8n%20%7C%20Claude-blue)]() [![License](https://img.shields.io/badge/license-Proprietary-orange)]()
+# Value-in-Motion™: The Agentic Customer Success Operating System
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() [![Platform](https://img.shields.io/badge/platform-n8n%20%7C%20Claude-blue)]() [![Framework](https://img.shields.io/badge/framework-LangChain-black)]() [![Orchestration](https://img.shields.io/badge/orchestration-LangGraph-purple)]() [![Observability](https://img.shields.io/badge/observability-LangSmith-orange)]() [![License](https://img.shields.io/badge/license-Proprietary-orange)]()
 
 # I. High-Level Vision (The "Why")
 
