@@ -24,42 +24,30 @@ We apply **Lean Principles** to SaaS telemetry to identify "waste" Muda before i
 
 ## 3. Customer Success Management Lifecycle
 The agent operates against a strict map of the customer journey. It does not "hallucinate" random actions; it executes the specific requirements of each phase defined in the state machine.
-  
+
 ```mermaid
 flowchart LR
+    %% MAIN LINEAR PHASES
+    P1["1. Transition"] --> P2["2. Discovery"] --> P3["3. Alignment"] --> P4["4. Activation"] --> P8["8. Value Proof"] --> P10["10. Advocacy"]
 
-%% MAIN LINEAR PHASES
-P1["1. Transition<br/>Sales handoff<br/>Account activation<br/>Commercial awareness"]
-P2["2. Discovery & Assessment<br/>Alignment questionnaire<br/>Maturity assessment<br/>Use-case discovery"]
-P3["3. Executive Alignment & CS Plan<br/>Internal review<br/>Kickoff & stakeholder mapping<br/>Mutual expectations<br/>CS plan co-creation"]
-P4["4. Value Activation<br/>Onboarding<br/>Training & education<br/>FTTv<br/>Workflow embedding<br/>TTV acceleration<br/>Adoption campaigns<br/>Playbook execution"]
-P8["8. Value Proof<br/>Insight presentation<br/>QBR<br/>Executive storytelling<br/>Value realization<br/>ROI RoSI"]
-P10["10. Relationship Capital<br/>Advocacy<br/>References<br/>Product feedback"]
+    %% OPERATIONAL LOOP
+    P5["5. Operational Orchestration"]
+    P6["6. Observability"]
+    P7["7. Risk Control"]
 
-P1 --> P2 --> P3 --> P4 --> P8 --> P10
+    P4 --> P5 --> P6 --> P7 --> P5
+    
+    %% RISK PATH
+    RD{"Risk Detected?"}
+    P7 --> RD
+    RD -->|Yes| P11["11. Churn Handling"]
+    RD -->|No| P5
+ ```   
+  
 
-%% OPERATIONAL LOOP
-P5["5. Operational Orchestration<br/>Touchpoints<br/>Meetings and follow-ups<br/>Emails and chasing<br/>CRM hygiene<br/>Internal alignment<br/>Partner coordination"]
-P6["6. Observability and Signals<br/>Usage metrics<br/>Telemetry<br/>Health monitoring<br/>Customer feedback"]
-P7["7. Risk Control<br/>Risk prevention<br/>Risk playbooks<br/>Support and escalation"]
-
-P4 --> P5 --> P6 --> P7 --> P5
-
-%% RISK PATH
-RD{"Risk detected?"}
-P7 --> RD
-P11["11. Churn Handling<br/>Churn save<br/>Post-mortem"]
-
-RD -->|Yes| P11
-RD -->|No| P5
-
-%% FEEDBACK
-P8 --> P6
-P10 --> P6
-```
 (Refer to docs/csm_activities_map.mmd for the full 45-step detailed activity breakdown)
 
-## 4. Customer Success Management Activities
+## 4. Customer Success Management Steps
 - Purpose: List the specific tasks (e.g., QBRs, Health Checks) that are being disrupted/augmented by the agent.
   
 ![Customer Success Lifecycle](CSM%20Activities%20Details.png)
