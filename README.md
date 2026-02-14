@@ -10,10 +10,8 @@ Unlike traditional "human-in-the-loop" automation (which simply fires linear tas
 
 ---
 
-## 2. The Philosophy: Engineering Revenue
-Traditional Customer Success health scores are **lagging indicators**—they tell you a customer is unhappy only after the damage is done. Value-in-Motion™ shifts the paradigm by treating CS as an **engineering problem** rather than a relationship management task.
-
-By applying **Lean Manufacturing Principles** to SaaS telemetry, we identify and eliminate "waste" in the customer journey before it manifests as churn.
+## 2. The Philosophy: Lean Customer Success Flow of Work
+We apply **Lean Principles** to SaaS telemetry to identify "waste" Muda before it becomes churn.
 
 | Lean Principle | In SaaS Terms | The Agentic Response |
 | :--- | :--- | :--- |
@@ -22,11 +20,10 @@ By applying **Lean Manufacturing Principles** to SaaS telemetry, we identify and
 | **Muri (Overburden)** | High volume of support tickets/complaints. | **Auto-Escalate:** Agent correlates ticket spikes with renewal dates and alerts the Director of CS. |
 ---
 
-
 # II. Strategy & Methodology (The "How")
 
-## 3. Customer Success Management Phases
-- Purpose: Show the lifecycle (Onboarding -> Adoption -> Renewal). This provides the "Map" of where the agents live.
+## 3. Customer Success Management Lifecycle
+The agent operates against a strict map of the customer journey. It does not "hallucinate" random actions; it executes the specific requirements of each phase defined in the state machine.
   
 ```mermaid
 flowchart LR
@@ -60,6 +57,7 @@ RD -->|No| P5
 P8 --> P6
 P10 --> P6
 ```
+(Refer to docs/csm_activities_map.mmd for the full 45-step detailed activity breakdown)
 
 ## 4. Customer Success Management Activities
 - Purpose: List the specific tasks (e.g., QBRs, Health Checks) that are being disrupted/augmented by the agent.
