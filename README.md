@@ -1,5 +1,5 @@
 # Value-in-Motion™: The Agentic Customer Success Operating System
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() [![Platform](https://img.shields.io/badge/platform-n8n%20%7C%20Claude-blue)]() [![Framework](https://img.shields.io/badge/framework-LangChain-black)]() [![Orchestration](https://img.shields.io/badge/orchestration-LangGraph-purple)]() [![Observability](https://img.shields.io/badge/observability-LangSmith-orange)]() [![License](https://img.shields.io/badge/license-Proprietary-orange)]()
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() [![Platform](https://img.shields.io/badge/platform-Python%20%7C%20Claude-blue)]() [![Framework](https://img.shields.io/badge/framework-LangChain-black)]() [![Orchestration](https://img.shields.io/badge/orchestration-LangGraph-purple)]() [![Observability](https://img.shields.io/badge/observability-LangSmith-orange)]() [![License](https://img.shields.io/badge/license-Proprietary-orange)]()
 
 # I. High-Level Vision (The "Why")
 
@@ -11,7 +11,7 @@ Unlike traditional "human-in-the-loop" automation (which simply fires linear tas
 ---
 
 ## 2. The Philosophy: Lean Customer Success Flow of Work
-We apply **Lean Principles** to SaaS telemetry to identify "waste" Muda before it becomes churn.
+We apply **Lean Principles** to SaaS telemetry to identify "waste" (Muda) before it becomes churn.
 
 | Lean Principle | In SaaS Terms | The Agentic Response |
 | :--- | :--- | :--- |
@@ -26,25 +26,66 @@ We apply **Lean Principles** to SaaS telemetry to identify "waste" Muda before i
 The agent operates against a strict map of the customer journey. It does not "hallucinate" random actions; it executes the specific requirements of each phase defined in the state machine.
 
 ```mermaid
-flowchart LR
-    %% MAIN LINEAR PHASES
-    P1["1. Transition"] --> P2["2. Discovery"] --> P3["3. Alignment"] --> P4["4. Activation"] --> P8["8. Value Proof"] --> P10["10. Advocacy"]
+flowchart TB
+    %% ==================================================================================
+    %% 1. STYLING & CLASSES
+    %% ==================================================================================
+    classDef spine fill:#f0f9ff,stroke:#0284c7,stroke-width:2px,color:#0c4a6e,text-align:left
+    classDef os fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,stroke-dasharray:5,5,color:#581c87,text-align:left
+    classDef risk fill:#fef2f2,stroke:#dc2626,stroke-width:2px,color:#7f1d1d,text-align:left
+    classDef churn fill:#f3f4f6,stroke:#4b5563,stroke-width:1px,color:#1f2937,text-align:left
 
-    %% OPERATIONAL LOOP
-    P5["5. Operational Orchestration"]
-    P6["6. Observability"]
-    P7["7. Risk Control"]
+    %% ==================================================================================
+    %% 2. THE LINEAR SPINE
+    %% ==================================================================================
+    subgraph Journey ["🚀 The Value-in-Motion™ Journey"]
+        direction TB
 
-    P4 --> P5 --> P6 --> P7 --> P5
+        P1["<b>Phase 1: Internal Transition</b><br/><i>Goal: Knowledge Transfer</i><br/>• Audit Sales Docs<br/>• Map Engagement Details<br/>• Handoff Meeting<br/>• Technical Activation"]:::spine
+
+        P2["<b>Phase 2: PSP Diagnostic</b><br/><i>Goal: Success-Ready vs At-Risk</i><br/>• Run PSP Diagnostic<br/>• Pain & Champion Alignment<br/>• Red Flag Resolution<br/>• Draft Success Plan"]:::spine
+
+        P3["<b>Phase 3: Customer Kickoff</b><br/><i>Goal: Alignment & Roadmap</i><br/>• Pre-Alignment Questionnaire<br/>• Mutual Success Agreement<br/>• Define FTTV Milestone<br/>• Confirm Cadence"]:::spine
+
+        P4["<b>Phase 4: Value Activation</b><br/><i>Goal: Adoption & FTTV</i><br/>• Role-Based Onboarding<br/>• Monitor Usage Gaps<br/>• Precision Campaigns<br/>• Workflow Integration<br/>• Value Acceleration Pivot"]:::spine
+
+        P8["<b>Phase 8: Value Realization</b><br/><i>Goal: ROI & Buy-in</i><br/>• Value Quantification<br/>• Executive Business Reviews<br/>• Executive Storytelling<br/>• Maturity Mapping"]:::spine
+
+        P9["<b>Phase 9: Growth & Retention</b><br/><i>Goal: Renew & Expand</i><br/>• Expansion Business Case<br/>• Early Renewal Strategy<br/>• Upsell/Cross-sell Exec<br/>• Multi-threading"]:::spine
+
+        P10["<b>Phase 10: Advocacy</b><br/><i>Goal: Product Partners</i><br/>• CAB<br/>• Reference Building<br/>• Third-Party Advocacy<br/>• Strategic Product Loop"]:::spine
+    end
+
+    %% ==================================================================================
+    %% 3. THE AGENTIC OS (Always-On)
+    %% ==================================================================================
+    subgraph OS ["🧠 The Agentic OS (Always-On)"]
+        direction TB
+        
+        P5["<b>Phase 5: Orchestration</b><br/><i>Goal: Hygiene & Alignment</i><br/>• Strategic Touchpoints<br/>• Auto-Follow-Up<br/>• Internal Alignment<br/>• Meeting Efficacy<br/>• CRM Hygiene"]:::os
+
+        P6["<b>Phase 6: Observability</b><br/><i>Goal: Anticipate Needs</i><br/>• Leading Indicators<br/>• UX Analytics<br/>• Health Score Calibration<br/>• Sentiment & VoC"]:::os
+
+        P7["<b>Phase 7: Risk Mitigation</b><br/><i>Goal: Neutralize Risks</i><br/>• Early Warning System<br/>• Risk Playbooks<br/>• Escalation Mgmt"]:::risk
+    end
+
+    %% ==================================================================================
+    %% 4. EXCEPTION HANDLING
+    %% ==================================================================================
+    subgraph Churn ["Phase 11: Churn Handling"]
+        direction TB
+        P11["<b>Phase 11: Churn Handling</b><br/><i>Goal: Win-back & Learning</i><br/>• Churn Save Play<br/>• Post-mortem & RCA<br/>• Win-Back Triggers"]:::churn
+    end
+
+    %% ==================================================================================
+    %% 5. CONNECTIONS
+    %% ==================================================================================
     
-    %% RISK PATH
-    RD{"Risk Detected?"}
-    P7 --> RD
-    RD -->|Yes| P11["11. Churn Handling"]
-    RD -->|No| P5
- ```   
-  
-(Refer to docs/csm_activities_map.mmd for the full 44-step detailed activity breakdown)
+    P1 --> P2 --> P3 --> P4 --> P8 --> P9 --> P10
+    OS ~~~ Journey
+    P7 -.->|Critical Risk| P11
+    P11 -.->|Win-Back| P1
+```
 
 # III. Technical Architecture (The "Engine")
 
@@ -52,80 +93,7 @@ flowchart LR
 
 This system moves beyond simple "Trigger -> Action" automation. It uses LangGraph to implement a State Machine. The agent has a "Long-Term Memory" (State) for each account and persists context across days or weeks.
 
-```mermaid
-graph LR
-    %% Main Sequential Phases
-    P1["Phase 1: Transition<br/>────────────<br/>1. Sales handoff<br/>2. Account activation<br/>3. Commercial awareness"]
-    
-    P2["Phase 2: Discovery & Assessment<br/>────────────<br/>4. Alignment questionnaire<br/>5. Maturity assessment<br/>6. Use-case discovery"]
-    
-    P3["Phase 3: Executive Alignment & CS Plan<br/>────────────<br/>8. Internal review<br/>9. Kickoff & stakeholder mapping<br/>10. Mutual expectations<br/>11. CS plan co-creation"]
-    
-    P4["Phase 4: Value Activation<br/>────────────<br/>12. Onboarding<br/>13. Training<br/>14. Education<br/>15. FTTV<br/>16. Workflow embedding<br/>17. TTV acceleration<br/>18. Adoption campaigns<br/>19. New features intro<br/>20. Playbook execution"]
-    
-    P8["Phase 8: Value Proof<br/>────────────<br/>33. Presentation<br/>34. QBR<br/>35. Executive storytelling<br/>36. Value realization<br/>37. Value quantification"]
-    
-    P10["Phase 10: Relationship Capital<br/>────────────<br/>42. Advocacy<br/>43. References<br/>44. Product feedback loop"]
-    
-    %% Continuous Processes
-    OPS["Phase 5: Operational Orchestration<br/>────────────<br/>21. Touchpoints<br/>22. Meeting prep & follow-ups<br/>23. Emails and Chasing<br/>24. Documentation and CRM<br/>25. Internal alignment<br/>26. Partner and SI coordination"]
-    
-    OBS["Phase 6: Observability & Signals<br/>────────────<br/>27. Usage and Metrics review<br/>28. Telemetry, active users<br/>29. Health monitoring<br/>30. Feedback and VoC"]
-    
-    RISK["Phase 7: Risk Control<br/>────────────<br/>31. Risk prevention<br/>32. Risk playbooks<br/>33. Support & escalation"]
-    
-    %% Exception Handling
-    DETECT{"Risk<br/>Detected?"}
-    P11["Phase 11: Churn Handling<br/>────────────<br/>45. Churn save<br/>46. Post-mortem"]
-    
-    %% Main Flow
-    P1 --> P2
-    P2 --> P3
-    P3 --> P4
-    P4 --> P8
-    P8 --> P10
-    
-    %% Continuous Process Interactions
-    P3 -.-> OBS
-    P4 --> OBS
-    
-    OBS <--> OPS
-    OBS <--> RISK
-    OPS <--> RISK
-    
-    %% Risk Detection Flow
-    RISK --> DETECT
-    DETECT -->|Yes| P11
-    DETECT -.->|No| OBS
-    
-    %% Styling
-    classDef transition fill:#FF9966,stroke:#333,stroke-width:2px,color:#000
-    classDef discovery fill:#4A90D9,stroke:#333,stroke-width:2px,color:#fff
-    classDef alignment fill:#339999,stroke:#333,stroke-width:2px,color:#fff
-    classDef activation fill:#669966,stroke:#333,stroke-width:2px,color:#fff
-    classDef proof fill:#669966,stroke:#333,stroke-width:2px,color:#fff
-    classDef relationship fill:#5A7FA6,stroke:#333,stroke-width:2px,color:#fff
-    classDef operational fill:#FF9966,stroke:#333,stroke-width:2px,color:#000
-    classDef observability fill:#4A90D9,stroke:#333,stroke-width:2px,color:#fff
-    classDef risk fill:#CC4444,stroke:#333,stroke-width:2px,color:#fff
-    classDef churn fill:#E6E6E6,stroke:#333,stroke-width:2px,color:#000
-    classDef decision fill:#CC4444,stroke:#333,stroke-width:3px,color:#fff
-    
-    class P1 transition
-    class P2 discovery
-    class P3 alignment
-    class P4 activation
-    class P8 proof
-    class P10 relationship
-    class OPS operational
-    class OBS observability
-    class RISK risk
-    class P11 churn
-    class DETECT decision
-```
-
-# Architecture Layers
-
+**Architecture Layers**:
 1. **Experience Layer**: Human interaction via Slack, Email, and CRM (Salesforce/Planhat).
 2. **Agent Layer** (LangGraph): The runtime brain. Handles branching, loops, and "Human-in-the-loop" gates.
 3. **Engineering Layer** (LangSmith): Control plane for tracing execution, debugging agent reasoning, and running regression tests.
@@ -216,181 +184,27 @@ We treat the agent as a product. Every run is traced in LangSmith to ensure reli
 
 1. **Clone the repo**:
 git clone https://github.com/ValueInMotion/value-in-motion-agent.git
-
 2. **Install dependencies**:
 pip install -r requirements.txt
-
 3. **Configure environment variables (API Keys for Anthropic/OpenAI, LangSmith, CRM)**:
 cp .env.example .env
 
 
-# VII. System Architecture
+# VII. Proof of Concept & Use Cases
 
-## 6. Claude Artifact
-Purpose: Use the Mermaid diagrams here. Show the "Autonomous Loops" and how data flows through the Intelligence Layer.
-The system moves beyond manual touchpoints into autonomous loops.
-
-**Interaction Logic**:
-
-**Explore the Interactive Workflow Logic (Claude Artifact)**
-https://claude.ai/public/artifacts/f8b3874b-521a-4a13-a8c0-aa0e68f6463b
-  
-**Get embed code**
-<iframe src="https://claude.site/public/artifacts/f8b3874b-521a-4a13-a8c0-aa0e68f6463b/embed" title="Claude Artifact" width="100%" height="600" frameborder="0" allow="clipboard-write" allowfullscreen></iframe>
-
-```mermaid
-flowchart TB
-  %% INTELLIGENCE LAYER
-  subgraph INTEL["🧠 AI Intelligence Layer (Claude 4.5)"]
-    direction LR
-    ai_engine["Orchestration Engine (n8n)"] --> ai_signals["Predictive Signals"]
-    ai_engine --> ai_triggers["Event Triggers"]
-  end
-  
-  %% AUTOMATED PHASES
-  subgraph AUTO["⚡ Autonomous Execution"]
-    direction TB
-    a1["🤖 Data Ingestion (Usage/CRM)"] --> a2["🤖 Lean Analysis (Muda/Mura/Muri)"]
-    a2 --> a3{Decision Gate}
-    
-    a3 -- Risk Detected --> a4["Trigger: Prevention Playbook"]
-    a3 -- Opportunity --> a5["Trigger: Expansion Proposal"]
-    a3 -- Routine --> a6["Trigger: Auto-QBR Generation"]
-  end
-
-  %% HUMAN LAYER
-  subgraph HUMAN["👤 Strategic Intervention"]
-    h1["Executive Relationship Strategy"]
-    h2["Complex Negotiations"]
-  end
-  
-  INTEL -.-> AUTO
-  AUTO --> HUMAN
-  HUMAN -.-> INTEL
-```
-
-- View Full Interaction Logic > Click above to explore the interactive Claude Artifact demonstrating the comprehensive workflow.
-  https://claude.site/public/artifacts/6327c6cb-62f8-4b6c-a007-3dd07bbd6681/embed
-  <details> <summary>📂 Click to view the Full Mermaid Source Code</summary>
-  
-```mermaid
-flowchart TB
-  subgraph INTEL["🧠 AI Intelligence Layer"]
-    direction LR
-    ai_engine["AI Orchestration Engine"] --> ai_signals["Predictive Signals"]
-  end
-  subgraph AP1["⚡ Phase 1: Automated Transition"]
-    a1_1["🤖 Auto: Sales data ingestion"] --> a1_2["🤖 Auto: Account provisioning"]
-  end
-  subgraph LOOP1["🔄 Autonomous Orchestration"]
-    l1_1["🤖 Auto: Smart touchpoint scheduling"] --> l1_2["🤖 Auto: Meeting prep"]
-  end
-  INTEL -.-> LOOP1
-  AP1 --> LOOP1
-```
-
-(Note: Full expansive code is available in agentic_cs_workflow.mmd)
-</details>
-
-## 7. Claude Agentic Customer Success Operations — AI-Augmented Lifecycle
-Purpose: A deep dive into how the specific AI agent handles the logic within the architecture.
-
-Link (GitHub won't render iframes):
-https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_workflow.mmd
-
-## Implementation
-https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_implementation_guide.md
-
-## Guide
-https://github.com/ValueInMotion/value-in-motion-agent/blob/main/agentic_cs_framework_guide.md
-
-
-# VIII. Proof of Concept & Use Cases
-
-## 8. Value-in-Motion-Agent (The Auditor)
-Purpose: Introduce the specific tool included in this repo. This is your primary "Product" or "Feature."
-  
-An agentic Customer Success auditor that identifies Lean waste (Muda, Mura, Muri) and automates strategic account health reviews
-Value in Motion™: Agentic CS Audit Framework
-This repository demonstrates the codification of my proprietary Customer Success methodology into an automated, AI-driven diagnostic engine.
+## 6. Value-in-Motion-Agent (The Auditor)
+An agentic Customer Success auditor that identifies Lean waste (Muda, Mura, Muri) and automates strategic account health reviews.
 
 **The Core Problem**
+
 Traditional CS health scores are often static and reactive. This framework applies Lean principles (Muda, Mura, Muri) to telemetry data to identify hidden churn risks and expansion opportunities before they hit the dashboard.
+
 **Technical Execution**
-Workflow Engine: n8n (visual orchestrator).
-**Intelligence Layer**
-Claude 4.5 Sonnet (using a custom System Prompt grounded in CS logic).
-Integrations: Google Sheets (Data Source) and Gmail (Automated Reporting).
+- **Workflow Engine**: LangGraph (Stateful Python Orchestrator).
+- **Intelligence Layer**: Claude 3.5 Sonnet (Reasoning & Narrative Generation).
+- **Integrations**: Google Sheets / Snowflake (Data Source) and Gmail/Slack (Reporting).
 
-Logic Blueprint
-```mermaid
-graph TD
-    A[Start: Customer Data Input] --> B{Analyze Usage Patterns}
-
-    B -->|Low Active Users| C["Detect: Muda (Waste)"]
-    B -->|Erratic Logins| D["Detect: Mura (Inconsistency)"]
-    B -->|High Ticket Volume| E["Detect: Muri (Overburden)"]
-
-    C --> F[Action: License Optimization Plan]
-    D --> G[Action: Adoption Training Plan]
-    E --> H[Action: QBR & Support Alignment]
-
-    F1 --> I["Output: 'Value in Motion' Workflows"]
-    G1 --> I
-    H1 --> I
-```
-
-## 9. Real-World Impact: The "Agentic Audit"
-Purpose: The case study (e.g., the $45k waste identification). This proves the theory works.
-  
+## 7. Real-World Impact: The "Agentic Audit"
 In a recent deployment, the Value-in-Motion agent identified 75% Unused Capacity (Muda) for a Tier-1 account.
-- Calculated Waste: ~$45,000/year.
+- Calculated Waste: ~$45,000/year/CSM.
 - Outcome: The agent automatically drafted a "Value Realization Roadmap," allowing the CSM to pivot the conversation from a "downsell risk" to a "re-deployment strategy" 6 months before the renewal date.
-
-
-# IX. Developer Resources (The "Action")
-
-## 10. Repository Structure
-- Purpose: A directory of files (/workflows, /prompts) so users can navigate the repo.
-
-- /workflows: Exported n8n JSON blueprints.
-- /prompts: System prompts for the Claude-based Reasoning Engine.
-- agentic_cs_workflow.mmd: Full Mermaid source code for the lifecycle diagram.
-
-## 11. Agentic Customer Success Operations — Intelligence
-- Purpose: Links to your implementation_guide.md and framework_guide.md.
-  
-```mermaid
-flowchart LR
-
-CI[Central Intelligence Layer]
-
-A1[Phase 1 - Automated Transition]
-A2[Phase 2 - Intelligent Discovery]
-A3[Phase 3 - AI Assisted Planning]
-A4[Phase 4 - Autonomous Activation]
-A8[Phase 8 - Automated Value Proof]
-A10[Phase 10 - Relationship Intelligence]
-A11[Phase 11 - Intelligent Churn Response]
-
-L1((Autonomous Orchestration))
-L2((Real-Time Observability))
-L3((Proactive Risk Management))
-
-EXP[AI-Driven Expansion Engine]
-
-CI --> A1
-A1 --> A2
-A2 --> A3
-A3 --> A4
-A4 --> A8
-A8 --> A10
-A10 --> A11
-
-CI --- L1
-CI --- L2
-CI --- L3
-
-A8 --> EXP
-EXP --> A11
-```
