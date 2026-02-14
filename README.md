@@ -176,6 +176,7 @@ flowchart TB
 # IV. Repository Structure
 The repository is structured to support enterprise-grade software engineering practices (Unit Testing, Evals, CI/CD).
 
+```
 value-in-motion-agent/
 ├── src/
 │   ├── graph/
@@ -199,6 +200,7 @@ value-in-motion-agent/
 │   └── setup_guide.md
 ├── requirements.txt
 └── .env.example
+```
 
 # V. Observability & Evals (LangSmith)
 We treat the agent as a product. Every run is traced in LangSmith to ensure reliability.
