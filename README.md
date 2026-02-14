@@ -52,6 +52,114 @@ flowchart LR
   
 ![Customer Success Lifecycle](CSM%20Activities%20Details.png)
 
+```mermaid
+flowchart TD
+  %% Value-in-Motion™ — CSM Phases (GitHub Mermaid)
+
+  P1["Phase 1 — Internal Transition<br/>Goal: Complete knowledge transfer (no customer yet)"]
+  P2["Phase 2 — Predictable Success Profile (PSP)<br/>Goal: Determine Success-Ready vs At-Risk"]
+  P3["Phase 3 — Customer Kickoff<br/>Goal: Partnership + expectations + path to initial ROI"]
+  P4["Phase 4 — Value Activation Velocity<br/>Goal: Drive adoption + embed workflows + hit FTTV fast"]
+  P5["Phase 5 — Strategic Orchestration (continuous)<br/>Goal: Proactive engagement + hygiene + stakeholder alignment"]
+  P6["Phase 6 — Proactive Observability (continuous)<br/>Goal: Anticipate needs via telemetry + sentiment"]
+  P7["Phase 7 — Risk Mitigation & Course Correction (continuous)<br/>Goal: Neutralize risks before they impact retention/adoption"]
+  P8["Phase 8 — Value Realization & Executive Alignment<br/>Goal: Quantify ROI + secure Exec Sponsor buy-in"]
+  P9["Phase 9 — Commercial Growth & Retention<br/>Goal: Renew baseline + expand footprint (Customer-Led Growth)"]
+  P10["Phase 10 — Advocacy & Ecosystem Flywheel<br/>Goal: Turn customers into advocates + product partners"]
+  P11["Phase 11 — Churn Handling<br/>Goal: Handle churn + learn + enable win-back"]
+
+  P1 --> P2 --> P3 --> P4 --> P5 --> P6 --> P7 --> P8 --> P9 --> P10 --> P11
+
+  %% Phase 1 steps
+  P1 --> S1["1. Audit Sales Docs"]
+  P1 --> S2["2. Map Engagement Details"]
+  P1 --> S3["3. Handoff Meeting"]
+  P1 --> S4["4. Technical Activation"]
+  P1 --> O1["Outcome: Zero-friction Handoff"]
+
+  %% Phase 2 steps
+  P2 --> S5["5. Run PSP Diagnostic"]
+  P2 --> S6["6. Pain, Metrics, Champion, DM Alignment"]
+  P2 --> S7["7. Red Flag Resolution"]
+  P2 --> S8["8. Draft Customer Success Plan (CSP)"]
+  P2 --> O2["Outcome: Risk Identification & Prevention"]
+
+  %% Phase 3 steps
+  P3 --> S9["9. Pre-Alignment Questionnaire"]
+  P3 --> S10["10. Mutual Success Agreement"]
+  P3 --> S11["11. Define FTTV (first value milestone)"]
+  P3 --> S12["12. Confirm Cadence"]
+  P3 --> O3["Outcome: Mutual Commitment to ROI & A Clear Roadmap"]
+
+  %% Phase 4 steps
+  P4 --> S13["13. Role-Based Onboarding → TTV"]
+  P4 --> S14["14. Monitor Usage/Adoption → Identify Behavioral Gaps"]
+  P4 --> S15["15. Precision Adoption Campaigns (Role-Based)"]
+  P4 --> S16["16. Workflow Integration & Embedding"]
+  P4 --> S17["17. Value Acceleration (Second Value Pivot)"]
+  P4 --> O4["Outcome: TVRV & Deep User Adoption"]
+
+  %% Phase 5 steps (continuous)
+  P5 --> S18["18. Strategic Touchpoints"]
+  P5 --> S19["19. Automated Follow-Up & Scheduling Sequences"]
+  P5 --> S20["20. Internal & Ecosystem Alignment"]
+  P5 --> S21["21. Meeting Preparation & Efficacy"]
+  P5 --> S22["22. CRM & Telemetry Hygiene"]
+  P5 --> O5["Outcome: Seamless Account Operations & Trust"]
+
+  %% Phase 6 steps (continuous)
+  P6 --> S23["23. Leading Indicator Monitoring"]
+  P6 --> S24["24. UX & Behavioral Analytics"]
+  P6 --> S25["25. Health Score Calibration"]
+  P6 --> S26["26. Sentiment & VoC"]
+  P6 --> O6["Outcome: Data-Driven Customer Insight"]
+
+  %% Phase 7 steps (continuous)
+  P7 --> S27["27. Early Warning System (EWS): alerts for usage drop, champion departure…"]
+  P7 --> S28["28. Proactive Risk Playbooks"]
+  P7 --> S29["29. Escalation Management"]
+  P7 --> O7["Outcome: Minimized Revenue Leakage"]
+
+  %% Phase 8 steps
+  P8 --> S30["30. Value Quantification"]
+  P8 --> S31["31. Executive Business Reviews (EBR)"]
+  P8 --> S32["32. Executive Storytelling"]
+  P8 --> S33["33. Maturity Mapping"]
+  P8 --> O8["Outcome: Verified ROI & Executive Buy-in"]
+
+  %% Phase 9 steps
+  P9 --> S34["34. Expansion Business Case"]
+  P9 --> S35["35. Early Renewal Strategy (Pre-Budget Cycle)"]
+  P9 --> S36["36. Upsell/Cross-sell Execution"]
+  P9 --> S37["37. Multi-threading Relationships"]
+  P9 --> O9["Outcome: NRR Expansion"]
+
+  %% Phase 10 steps
+  P10 --> S38["38. Customer Advisory Board (CAB)"]
+  P10 --> S39["39. Reference Building"]
+  P10 --> S40["40. Third-Party Advocacy"]
+  P10 --> S41["41. Strategic Product Loop"]
+  P10 --> O10["Outcome: Brand Promoters & Organic Pipeline"]
+
+  %% Phase 11 steps
+  P11 --> S42["42. Churn Save Play"]
+  P11 --> S43["43. Churn Post-mortem & Root Cause Analysis"]
+  P11 --> S44["44. Win-Back Campaign Triggers"]
+  P11 --> O11["Outcome: Continuous Improvement & Preserved Relationships"]
+
+  %% Optional styling
+  classDef phase fill:#0b1220,stroke:#64748b,color:#e2e8f0,stroke-width:1px;
+  classDef outcome fill:#052e1b,stroke:#34d399,color:#eafff6,stroke-width:1px;
+  classDef step fill:#0f172a,stroke:#334155,color:#e2e8f0,stroke-width:1px;
+
+  class P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11 phase;
+  class O1,O2,O3,O4,O5,O6,O7,O8,O9,O10,O11 outcome;
+  class S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S26,S27,S28,S29,S30,S31,S32,S33,S34,S35,S36,S37,S38,S39,S40,S41,S42,S43,S44 step;
+
+
+ ```   
+
+
 - Customer Success Management Activities - Mermaid Graph
 ```mermaid
 graph LR
