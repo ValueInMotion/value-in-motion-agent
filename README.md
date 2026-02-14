@@ -139,7 +139,7 @@ flowchart TB
 - **Orchestration**: LangGraph (Python) - Replaces rigid n8n workflows with cyclic graphs.
 - **LLM**: Claude 3.5 Sonnet / GPT-4o - Powered by LangChain.
 - **Observability**: LangSmith - For tracing agent thought processes and calculating token costs per account.
-- **Data Source**: Salesforce / Planhat / Snowflake.)
+- **Data Source**: Salesforce / Planhat / Snowflake.
 
 # IV. Repository Structure
 The repository is structured to support enterprise-grade software engineering practices (Unit Testing, Evals, CI/CD).
