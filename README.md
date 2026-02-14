@@ -3,7 +3,7 @@
 
 # I. High-Level Vision (The "Why")
 
-## 1. Value-in-Motion™: The Agentic CS Operating System
+## 1. Value-in-Motion™: The Agentic Customer Success Operating System
 **Value-in-Motion™** is an event-driven, AI-augmented architecture that transforms Customer Success from a reactive support function into a scalable revenue engine. It operationalizes the "Agentic CS" model to automate **80% of administrative overhead** while driving Net Revenue Retention (NRR).
 ---
 
