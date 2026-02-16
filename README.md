@@ -25,7 +25,7 @@ We apply **Lean Principles** to SaaS telemetry to identify "waste" (Muda) before
 ## 3. Customer Success Management Lifecycle
 The agent operates against a strict map of the customer journey. It does not "hallucinate" random actions; it executes the specific requirements of each phase defined in the state machine.
 
-# Value in Motion™ Framework
+# Value in Motion™ CSM Agent
 ### The Autonomous Customer Success Engine
 
 ![Value in Motion™ CSM Autonomous Agent](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png?raw=true)
