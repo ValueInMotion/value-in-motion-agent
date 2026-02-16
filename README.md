@@ -25,67 +25,12 @@ We apply **Lean Principles** to SaaS telemetry to identify "waste" (Muda) before
 ## 3. Customer Success Management Lifecycle
 The agent operates against a strict map of the customer journey. It does not "hallucinate" random actions; it executes the specific requirements of each phase defined in the state machine.
 
-```mermaid
-flowchart TB
-    %% ==================================================================================
-    %% 1. STYLING & CLASSES
-    %% ==================================================================================
-    classDef spine fill:#f0f9ff,stroke:#0284c7,stroke-width:2px,color:#0c4a6e,text-align:left
-    classDef os fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,stroke-dasharray:5,5,color:#581c87,text-align:left
-    classDef risk fill:#fef2f2,stroke:#dc2626,stroke-width:2px,color:#7f1d1d,text-align:left
-    classDef churn fill:#f3f4f6,stroke:#4b5563,stroke-width:1px,color:#1f2937,text-align:left
+# Value in Motion™ Framework
+### The Autonomous Customer Success Engine
 
-    %% ==================================================================================
-    %% 2. THE LINEAR SPINE
-    %% ==================================================================================
-    subgraph Journey ["🚀 The Value-in-Motion™ Journey"]
-        direction TB
+![Value in Motion™ CSM Autonomous Agent](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png?raw=true)
 
-        P1["<b>Phase 1: Internal Transition</b><br/><i>Goal: Knowledge Transfer</i><br/>• Audit Sales Docs<br/>• Map Engagement Details<br/>• Handoff Meeting<br/>• Technical Activation"]:::spine
-
-        P2["<b>Phase 2: PSP Diagnostic</b><br/><i>Goal: Success-Ready vs At-Risk</i><br/>• Run PSP Diagnostic<br/>• Pain & Champion Alignment<br/>• Red Flag Resolution<br/>• Draft Success Plan"]:::spine
-
-        P3["<b>Phase 3: Customer Kickoff</b><br/><i>Goal: Alignment & Roadmap</i><br/>• Pre-Alignment Questionnaire<br/>• Mutual Success Agreement<br/>• Define FTTV Milestone<br/>• Confirm Cadence"]:::spine
-
-        P4["<b>Phase 4: Value Activation</b><br/><i>Goal: Adoption & FTTV</i><br/>• Role-Based Onboarding<br/>• Monitor Usage Gaps<br/>• Precision Campaigns<br/>• Workflow Integration<br/>• Value Acceleration Pivot"]:::spine
-
-        P8["<b>Phase 8: Value Realization</b><br/><i>Goal: ROI & Buy-in</i><br/>• Value Quantification<br/>• Executive Business Reviews<br/>• Executive Storytelling<br/>• Maturity Mapping"]:::spine
-
-        P9["<b>Phase 9: Growth & Retention</b><br/><i>Goal: Renew & Expand</i><br/>• Expansion Business Case<br/>• Early Renewal Strategy<br/>• Upsell/Cross-sell Exec<br/>• Multi-threading"]:::spine
-
-        P10["<b>Phase 10: Advocacy</b><br/><i>Goal: Product Partners</i><br/>• CAB<br/>• Reference Building<br/>• Third-Party Advocacy<br/>• Strategic Product Loop"]:::spine
-    end
-
-    %% ==================================================================================
-    %% 3. THE AGENTIC OS (Always-On)
-    %% ==================================================================================
-    subgraph OS ["🧠 The Agentic OS (Always-On)"]
-        direction TB
-        
-        P5["<b>Phase 5: Orchestration</b><br/><i>Goal: Hygiene & Alignment</i><br/>• Strategic Touchpoints<br/>• Auto-Follow-Up<br/>• Internal Alignment<br/>• Meeting Efficacy<br/>• CRM Hygiene"]:::os
-
-        P6["<b>Phase 6: Observability</b><br/><i>Goal: Anticipate Needs</i><br/>• Leading Indicators<br/>• UX Analytics<br/>• Health Score Calibration<br/>• Sentiment & VoC"]:::os
-
-        P7["<b>Phase 7: Risk Mitigation</b><br/><i>Goal: Neutralize Risks</i><br/>• Early Warning System<br/>• Risk Playbooks<br/>• Escalation Mgmt"]:::risk
-    end
-
-    %% ==================================================================================
-    %% 4. EXCEPTION HANDLING
-    %% ==================================================================================
-    subgraph Churn ["Phase 11: Churn Handling"]
-        direction TB
-        P11["<b>Phase 11: Churn Handling</b><br/><i>Goal: Win-back & Learning</i><br/>• Churn Save Play<br/>• Post-mortem & RCA<br/>• Win-Back Triggers"]:::churn
-    end
-
-    %% ==================================================================================
-    %% 5. CONNECTIONS
-    %% ==================================================================================
-    
-    P1 --> P2 --> P3 --> P4 --> P8 --> P9 --> P10
-    OS ~~~ Journey
-    P7 -.->|Critical Risk| P11
-    P11 -.->|Win-Back| P1
-```
+https://github.com/ValueInMotion/value-in-motion-agent/blob/main/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png
 
 # III. Technical Architecture (The "Engine")
 
