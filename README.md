@@ -26,9 +26,8 @@ Value in Motion™:
 - Loops until success criteria are met
 - Acts — not just suggests
 
-**Human = supervisor**
-
-**Agent = lifecycle executor**
+**Human = Supervisor**
+**Agent = Lifecycle Executor**
 
 
 # II. Philosophy: Lean Customer Success Flow
@@ -84,11 +83,6 @@ It operates against a **strict lifecycle state machine**, where each phase has:
 - Renewal brief generation
 
 # IV. Technical Architecture
-
-## Stateful Orchestration Engine
-This system moves beyond simple:
-
-Trigger → Action automation.
 
 It implements a **LangGraph-based state machine** where:
 - Each account has persistent state
@@ -247,7 +241,7 @@ The MVP succeeds if:
 - Lean waste auto-detected
 
 
-# VII. Proof of Concept
+# VIII. Proof of Concept
 
 **The Agentic Audit**
 
