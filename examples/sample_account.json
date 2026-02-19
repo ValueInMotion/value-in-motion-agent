@@ -1,0 +1,7 @@
+{
+  "account_name": "ACME Corp",
+  "licenses": 100,
+  "active_users": 35,
+  "renewal_date": "2026-03-01",
+  "notes": "Sales handoff: 2 champions, API testing pain, rollout to EMEA"
+}
