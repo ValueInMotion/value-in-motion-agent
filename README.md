@@ -55,7 +55,7 @@ It operates against a **strict lifecycle state** machine, where each phase has:
 - Gated transitions
 - Exit criteria
 - Escalation logic
-- 
+  
 ## Customer Success Lifecycle Phases (MVP)
 **1. Handoff Audit**
 - Validate contract & opportunity data
@@ -83,16 +83,80 @@ It operates against a **strict lifecycle state** machine, where each phase has:
 - Expansion detection
 - Renewal brief generation
 
-# Value in Motion™ CSM Agent
-### The Autonomous Customer Success Engine
+# IV. Technical Architecture
+
+## Stateful Orchestration Engine
+This system moves beyond simple:
+
+Trigger → Action automation.
+
+It implements a **LangGraph-based state machine** where:
+- Each account has persistent state
+- The agent reasons across days/weeks
+- Progression is gated
+- Loops resolve missing data
+- Human approval can be injected
+
+## Architecture Layers
+
+**1. Experience Layer**
+- Slack
+- Email
+- CRM (Salesforce / Planhat)
+
+**2. Agent Runtime Layer (LangGraph)**
+- Phase router
+- Conditional gates
+- Loop resolution
+- Risk branching
+
+**3. Persistence Layer**
+- Account state (Phase, Risk Score, Missing Anchors)
+- Checkpointers
+
+**4. Observability Layer (LangSmith)**
+- Execution traces
+- Hallucination detection
+- Token cost tracking
+- Regression testing
+
+## Agentic Layers
 
 ![Value in Motion™ CSM Autonomous Agent](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png?raw=true)
 
-https://github.com/ValueInMotion/value-in-motion-agent/blob/main/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png
 
-# III. Technical Architecture (The "Engine")
+## Orchestration Flow
 
-## 4. Customer Success Stateful Orchestration
+```mermaid
+flowchart TB
+    subgraph Memory ["💾 Persistence Layer"]
+        State["Account State<br/>(Phase, Risk Score, Missing Fields)"]
+    end
+
+    Start((Start)) --> Router{Phase Router}
+
+    Router -->|Handoff| Audit[Handoff Audit Node]
+    Audit --> Gate{Data Ready?}
+
+    Gate -- No --> Loop[Fetch Missing Anchors]
+    Loop --> Audit
+
+    Gate -- Yes --> Diagnostic[Diagnostic Node]
+
+    Diagnostic --> Risk{Risk Detected?}
+
+    Risk -- Yes --> Escalate[Draft Mitigation Plan]
+    Risk -- No --> Plan[Draft Success Plan]
+
+    Plan --> Velocity[Velocity Sensors]
+
+    Velocity --> NBA[Next Best Action Queue]
+
+    Escalate -.-> Human((Human Approval))
+    Human --> Execute[Execute Strategy]
+```
+
+## Stateful Orchestration
 
 This system moves beyond simple "Trigger -> Action" automation. It uses LangGraph to implement a State Machine. The agent has a "Long-Term Memory" (State) for each account and persists context across days or weeks.
 
@@ -138,16 +202,23 @@ flowchart TB
     Human -->|Reject| Replan[Re-Reason Strategy]
 ```
 
-## 5. Tech Stack
-- **Orchestration**: LangGraph (Python) - Replaces rigid n8n workflows with cyclic graphs.
-- **LLM**: Claude 3.5 Sonnet / GPT-4o - Powered by LangChain.
-- **Observability**: LangSmith - For tracing agent thought processes and calculating token costs per account.
-- **Data Source**: Salesforce / Planhat / Snowflake.
+## Tech Stack (MVP)
 
-# IV. Repository Structure
-The repository is structured to support enterprise-grade software engineering practices (Unit Testing, Evals, CI/CD).
+- **Orchestration**: LangGraph (Python)
+- **LLM**: Claude 3.5 Sonnet / GPT-4o
+- **Framework**: LangChain
+- **Observability**: LangSmith
+- **Data Sources**: Salesforce / Planhat / Snowflake
+- **Telemetry Analysi**s: Pandas / SQL
 
-```
+No multi-agent swarm.
+No heavy ML forecasting.
+Focused lifecycle execution.
+
+
+# VI. Repository Structure
+
+```css
 value-in-motion-agent/
 ├── src/
 │   ├── graph/
@@ -173,41 +244,78 @@ value-in-motion-agent/
 └── .env.example
 ```
 
-# V. Observability & Evals (LangSmith)
-We treat the agent as a product. Every run is traced in LangSmith to ensure reliability.
+Structured for:
+- Unit testing
+- Integration testing
+- Eval-driven development
+- CI/CD compatibility
 
-## Key Metrics Monitored:
-1. **Handoff Audit Accuracy**: Did the agent correctly identify missing contract fields?
-2. **Risk hallucination**: Did the agent flag a risk that didn't exist? (Regression testing).
-3. **Draft Safety**: Ensures no email drafts contain unauthorized pricing commitments.
 
-# VI. Getting Started
+# V. Observability & Evals
 
-# Installation
+The agent is treated as production software.
 
-1. **Clone the repo**:
+**Core Metrics**
+1. Handoff audit accuracy
+2. False-positive risk detection
+3. Draft safety compliance
+4. Token cost per account
+5. Time saved per lifecycle phase
+
+Every execution is traceable and regression-tested in LangSmith.
+
+# VIII. MVP Definition
+
+This is not a CRM replacement.
+
+This is an autonomous lifecycle execution engine.
+
+The MVP succeeds if:
+- ≥30% time saved per CSM
+- No dropped stakeholder
+- Renewal brief generated ≥80% relevance
+- Expansion signals surfaced early
+- Lean waste auto-detected
+
+
+# IX. Proof of Concept
+
+**The Agentic Audit**
+
+In a Tier-1 deployment:
+- 75% unused license capacity identified (Muda)
+- ~$45,000/year inefficiency detected
+- Renewal conversation reframed 6 months early
+- Shift from downsell risk → redeployment strategy
+
+# X. Installation
+
+```bash
 git clone https://github.com/ValueInMotion/value-in-motion-agent.git
-2. **Install dependencies**:
+cd value-in-motion-agent
 pip install -r requirements.txt
-3. **Configure environment variables (API Keys for Anthropic/OpenAI, LangSmith, CRM)**:
 cp .env.example .env
+```
 
+Add API keys:
+- Anthropic / OpenAI
+- LangSmith
+- CRM credentials
 
-# VII. Proof of Concept & Use Cases
+# XI. Vision
 
-## 6. Value-in-Motion-Agent (The Auditor)
-An agentic Customer Success auditor that identifies Lean waste (Muda, Mura, Muri) and automates strategic account health reviews.
+Customer Success today:
+- Manual
+- Reactive
+- Fragmented
+- Signal-blind
 
-**The Core Problem**
+Value in Motion™:
+- Structured
+- Stateful
+- Signal-driven
+- Autonomous
+- Expansion-oriented
 
-Traditional CS health scores are often static and reactive. This framework applies Lean principles (Muda, Mura, Muri) to telemetry data to identify hidden churn risks and expansion opportunities before they hit the dashboard.
-
-**Technical Execution**
-- **Workflow Engine**: LangGraph (Stateful Python Orchestrator).
-- **Intelligence Layer**: Claude 3.5 Sonnet (Reasoning & Narrative Generation).
-- **Integrations**: Google Sheets / Snowflake (Data Source) and Gmail/Slack (Reporting).
-
-## 7. Real-World Impact: The "Agentic Audit"
-In a recent deployment, the Value-in-Motion agent identified 75% Unused Capacity (Muda) for a Tier-1 account.
-- Calculated Waste: ~$45,000/year/CSM.
-- Outcome: The agent automatically drafted a "Value Realization Roadmap," allowing the CSM to pivot the conversation from a "downsell risk" to a "re-deployment strategy" 6 months before the renewal date.
+From relationship management
+**→ To autonomous revenue orchestration.**
