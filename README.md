@@ -1,26 +1,53 @@
-# Value-in-Motion™: The Agentic Customer Success Operating System
+# Value-in-Motion™: Autonomous AI Agent for Customer Success Manager
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() [![Platform](https://img.shields.io/badge/platform-Python%20%7C%20Claude-blue)]() [![Framework](https://img.shields.io/badge/framework-LangChain-black)]() [![Orchestration](https://img.shields.io/badge/orchestration-LangGraph-purple)]() [![Observability](https://img.shields.io/badge/observability-LangSmith-orange)]() [![License](https://img.shields.io/badge/license-Proprietary-orange)]()
 
-# I. High-Level Vision (The "Why")
+# I. Executive Overview
 
-## 1. Value-in-Motion™: The Agentic Customer Success Operating System
-**Value-in-Motion™** is an event-driven, autonomous architecture that transforms Customer Success from a reactive support function into a scalable revenue engine.
+## What It Is
 
-Unlike traditional "human-in-the-loop" automation (which simply fires linear tasks), this system utilizes **Autonomous Agentic Orchestration** (Stateful Graphs). It maintains the "state" of every customer account, actively reasoning through risks, gating progress based on data readiness, and looping until success criteria are met.
+**Value-in-Motion™** is an event-driven, stateful autonomous AI agent that executes the full Customer Success lifecycle:
+
+**Sales Handoff → Onboarding → Adoption → Risk Management → Renewal → Expansion**
+
+It transforms Customer Success from reactive relationship management into a structured, signal-driven revenue engine.
 
 ---
 
-## 2. The Philosophy: Lean Customer Success Flow of Work
-We apply **Lean Principles** to SaaS telemetry to identify "waste" (Muda) before it becomes churn.
+## What Makes It Different
 
-| Lean Principle | In SaaS Terms | The Agentic Response |
-| :--- | :--- | :--- |
-| **Muda (Waste)** | Paying for unused licenses or features. | **Auto-Audit:** Agent identifies shelfware and drafts a "License Optimization Plan" to save the renewal. |
-| **Mura (Inconsistency)** | Erratic login patterns or "spiky" adoption. | **Auto-Nudge:** Agent detects usage gaps and triggers targeted training workflows. |
-| **Muri (Overburden)** | High volume of support tickets/complaints. | **Auto-Escalate:** Agent correlates ticket spikes with renewal dates and alerts the Director of CS. |
+Most automation tools:
+- Trigger linear workflows
+- Fire isolated tasks
+- Depend heavily on human orchestration
+
+Value in Motion™:
+- Maintains persistent account state
+- Uses graph-based reasoning
+- Gates progress based on data readiness
+- Loops until success criteria are met
+- Acts — not just suggests
+
+**Human = supervisor**
+
+**Agent = lifecycle executor**
+
 ---
 
-# II. Domain Logic (The "Map")
+# II. Philosophy: Lean Customer Success Flow
+
+Customer Success waste leads to churn.
+
+We apply Lean (Muda, Mura, Muri) directly to SaaS telemetry.
+
+| Lean Concept             | SaaS Equivalent                     | Agentic Response                                   |
+| ------------------------ | ----------------------------------- | -------------------------------------------------- |
+| **Muda (Waste)**         | Shelfware / unused licenses         | Auto-audit + License Optimization Plan             |
+| **Mura (Inconsistency)** | Erratic adoption patterns           | Usage gap detection + Targeted enablement workflow |
+| **Muri (Overburden)**    | Ticket spikes / escalation overload | Risk correlation + Pre-renewal alert               |
+
+
+
+# III. Domain Logic: The Lifecycle Map
 
 ## 3. Customer Success Management Lifecycle
 The agent operates against a strict map of the customer journey. It does not "hallucinate" random actions; it executes the specific requirements of each phase defined in the state machine.
