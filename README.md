@@ -11,7 +11,6 @@
 
 It transforms Customer Success from reactive relationship management into a structured, signal-driven revenue engine.
 
----
 
 ## What Makes It Different
 
@@ -31,7 +30,6 @@ Value in Motion™:
 
 **Agent = lifecycle executor**
 
----
 
 # II. Philosophy: Lean Customer Success Flow
 
@@ -45,12 +43,45 @@ We apply Lean (Muda, Mura, Muri) directly to SaaS telemetry.
 | **Mura (Inconsistency)** | Erratic adoption patterns           | Usage gap detection + Targeted enablement workflow |
 | **Muri (Overburden)**    | Ticket spikes / escalation overload | Risk correlation + Pre-renewal alert               |
 
+The agent continuously scans telemetry to detect structural inefficiencies before revenue impact.
 
 
 # III. Domain Logic: The Lifecycle Map
 
-## 3. Customer Success Management Lifecycle
-The agent operates against a strict map of the customer journey. It does not "hallucinate" random actions; it executes the specific requirements of each phase defined in the state machine.
+The agent does not hallucinate arbitrary actions.
+
+It operates against a **strict lifecycle state** machine, where each phase has:
+- Required anchors
+- Gated transitions
+- Exit criteria
+- Escalation logic
+- 
+## Customer Success Lifecycle Phases (MVP)
+**1. Handoff Audit**
+- Validate contract & opportunity data
+- Identify missing anchors
+- Detect expectation gaps
+
+**2. Diagnostic Phase**
+- Stakeholder mapping
+- Pain metric validation
+- Risk detection
+
+**3. Success Plan Construction**
+- 30-60-90 roadmap
+- KPI alignment
+- Value hypothesis
+
+**4. Velocity Monitoring**
+- TTV metrics
+- License utilization
+- Engagement signals
+- Next Best Action queue
+
+**5. Pre-Renewal Orchestration**
+- Risk scoring
+- Expansion detection
+- Renewal brief generation
 
 # Value in Motion™ CSM Agent
 ### The Autonomous Customer Success Engine
