@@ -26,7 +26,8 @@ Value in Motion™:
 - Loops until success criteria are met
 - Acts — not just suggests
 
-**Human = Supervisor** --> 
+**Human = Supervisor**  
+**↓**  
 **Agent = Lifecycle Executor**
 
 
@@ -84,7 +85,7 @@ It operates against a **strict lifecycle state machine**, where each phase has:
 
 # IV. Technical Architecture
 
-It implements a **LangGraph-based state machine** where:
+It implements a LangGraph-based state machine that:
 - Each account has persistent state
 - The agent reasons across days/weeks
 - Progression is gated
