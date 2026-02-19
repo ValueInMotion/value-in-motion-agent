@@ -26,7 +26,7 @@ Value in Motion™:
 - Loops until success criteria are met
 - Acts — not just suggests
 
-**Human = Supervisor**
+**Human = Supervisor** --> 
 **Agent = Lifecycle Executor**
 
 
