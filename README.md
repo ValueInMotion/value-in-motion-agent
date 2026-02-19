@@ -1,4 +1,4 @@
-# Value-in-Motion™: Autonomous AI Agent for Customer Success Manager
+# Value-in-Motion™: Autonomous Lifecycle Engine for Customer Success
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() [![Platform](https://img.shields.io/badge/platform-Python%20%7C%20Claude-blue)]() [![Framework](https://img.shields.io/badge/framework-LangChain-black)]() [![Orchestration](https://img.shields.io/badge/orchestration-LangGraph-purple)]() [![Observability](https://img.shields.io/badge/observability-LangSmith-orange)]() [![License](https://img.shields.io/badge/license-Proprietary-orange)]()
 
 # I. Executive Overview
@@ -50,7 +50,7 @@ The agent continuously scans telemetry to detect structural inefficiencies befor
 
 The agent does not hallucinate arbitrary actions.
 
-It operates against a **strict lifecycle state** machine, where each phase has:
+It operates against a **strict lifecycle state machine**, where each phase has:
 - Required anchors
 - Gated transitions
 - Exit criteria
@@ -125,37 +125,6 @@ It implements a **LangGraph-based state machine** where:
 ![Value in Motion™ CSM Autonomous Agent](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png?raw=true)
 
 
-## Orchestration Flow
-
-```mermaid
-flowchart TB
-    subgraph Memory ["💾 Persistence Layer"]
-        State["Account State<br/>(Phase, Risk Score, Missing Fields)"]
-    end
-
-    Start((Start)) --> Router{Phase Router}
-
-    Router -->|Handoff| Audit[Handoff Audit Node]
-    Audit --> Gate{Data Ready?}
-
-    Gate -- No --> Loop[Fetch Missing Anchors]
-    Loop --> Audit
-
-    Gate -- Yes --> Diagnostic[Diagnostic Node]
-
-    Diagnostic --> Risk{Risk Detected?}
-
-    Risk -- Yes --> Escalate[Draft Mitigation Plan]
-    Risk -- No --> Plan[Draft Success Plan]
-
-    Plan --> Velocity[Velocity Sensors]
-
-    Velocity --> NBA[Next Best Action Queue]
-
-    Escalate -.-> Human((Human Approval))
-    Human --> Execute[Execute Strategy]
-```
-
 ## Stateful Orchestration
 
 This system moves beyond simple "Trigger -> Action" automation. It uses LangGraph to implement a State Machine. The agent has a "Long-Term Memory" (State) for each account and persists context across days or weeks.
@@ -209,14 +178,14 @@ flowchart TB
 - **Framework**: LangChain
 - **Observability**: LangSmith
 - **Data Sources**: Salesforce / Planhat / Snowflake
-- **Telemetry Analysi**s: Pandas / SQL
+- **Telemetry Analysis**: Pandas / SQL
 
 No multi-agent swarm.
 No heavy ML forecasting.
 Focused lifecycle execution.
 
 
-# VI. Repository Structure
+# V. Repository Structure
 
 ```css
 value-in-motion-agent/
@@ -251,7 +220,7 @@ Structured for:
 - CI/CD compatibility
 
 
-# V. Observability & Evals
+# VI. Observability & Evals
 
 The agent is treated as production software.
 
@@ -264,7 +233,7 @@ The agent is treated as production software.
 
 Every execution is traceable and regression-tested in LangSmith.
 
-# VIII. MVP Definition
+# VII. MVP Definition
 
 This is not a CRM replacement.
 
@@ -278,7 +247,7 @@ The MVP succeeds if:
 - Lean waste auto-detected
 
 
-# IX. Proof of Concept
+# VII. Proof of Concept
 
 **The Agentic Audit**
 
@@ -288,7 +257,7 @@ In a Tier-1 deployment:
 - Renewal conversation reframed 6 months early
 - Shift from downsell risk → redeployment strategy
 
-# X. Installation
+# IX. Installation
 
 ```bash
 git clone https://github.com/ValueInMotion/value-in-motion-agent.git
@@ -302,7 +271,7 @@ Add API keys:
 - LangSmith
 - CRM credentials
 
-# XI. Vision
+# X. Vision
 
 Customer Success today:
 - Manual
