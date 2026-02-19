@@ -266,6 +266,14 @@ Add API keys:
 - LangSmith
 - CRM credentials
 
+# How to Run (Local Demo)
+
+Run a minimal lifecycle simulation locally:
+
+```bash
+python src/main.py
+```
+
 # X. Vision
 
 Customer Success today:
