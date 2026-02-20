@@ -13,6 +13,12 @@
 
 An autonomous, lifecycle-aware AI system that **detects risk, orchestrates actions, and drives revenue outcomes across Customer Success.**
 
+## Who this is for
+
+- Customer Success Leaders (CSM / CS Ops)
+- SaaS Founders (Series A–C)
+- Revenue / GTM teams focused on NRR & expansion
+- AI / Agentic builders in SaaS workflows
 ---
 
 ## Live Demo — Risk Detection Agent (V0)
@@ -30,7 +36,7 @@ python -m src.risk_agent.main
 
 ### Example Output
 
-=== VALUE IN MOTION — RISK AGENT ===
+**=== VALUE IN MOTION — RISK AGENT ===**
 
 **Account: ACME**
 **Risk: HIGH**
