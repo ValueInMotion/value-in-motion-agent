@@ -172,7 +172,7 @@ It implements a LangGraph-based state machine that:
 - renewal_agent
 
 
-<img src="docs/diagrams/Value in Motion™ CSM Autonomous Agent.png" alt="Value in Motion CSM Autonomous Agent" />
+![Value in Motion CSM Autonomous Agent](docs/diagrams/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png)
 
 
 ## Stateful Orchestration
@@ -329,7 +329,7 @@ Run a minimal lifecycle simulation locally:
 ```bash
 python -m src.risk_agent.main
 ```
-
+---
 # X. Vision
 
 Customer Success today:
