@@ -1,4 +1,4 @@
-# Value-in-Motion™: Autonomous Lifecycle Engine for Customer Success
+# # Value-in-Motion™ — Autonomous Lifecycle Engine
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() 
 [![Platform](https://img.shields.io/badge/platform-Python%20%7C%20Claude-blue)]() 
 [![Framework](https://img.shields.io/badge/framework-LangChain-black)]() 
@@ -12,6 +12,8 @@
 
 An autonomous, lifecycle-aware AI system that **detects risk, orchestrates actions, and drives revenue outcomes across Customer Success.**
 > This is not a dashboard. This is a **decision engine for Customer Success.**
+
+This system operationalizes Customer Success as a **closed-loop execution engine**, not a reporting layer.
 
 ## Who this is for
 
@@ -64,20 +66,17 @@ python -m src.risk_agent.main
 
 ### Example Output
 
-**=== VALUE IN MOTION — RISK AGENT ===**
+### 📊 Example Output
 
-**Account: ACME**
-**Risk: HIGH**
+```text
+=== VALUE IN MOTION — RISK AGENT ===
 
-**Reasons:**
-Low ICP fit, High deal complexity, Low usage (30d), No workflow integration, Low ROI, No executive engagement
-
-**Action:**
-Recovery: exec alignment + value proof plan (14 days)
-
-**Full output:**
-examples/risk_agent_output.txt
-[examples/risk_agent_output.txt](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/examples/risk_agent_output.txt)
+Account: ACME
+Risk: HIGH
+Reasons: Low ICP fit, High deal complexity, Low usage (30d), No workflow integration, Low ROI, No executive engagement
+Action: Recovery: exec alignment + value proof plan (14 days)
+```
+Full output: [`examples/risk_agent_output.txt`](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/examples/risk_agent_output.txt)
 
 ---
 
@@ -391,3 +390,30 @@ Value in Motion™:
 
 From relationship management
 **→ To autonomous revenue orchestration.**
+
+---
+
+## 🧠 Positioning
+
+Value-in-Motion™ is not:
+
+- a CRM  
+- a dashboard  
+- a reporting tool  
+
+It is:
+
+👉 **An Autonomous Customer Success Operating System**
+
+---
+
+## Key Insight
+
+Customer Success does not fail because of lack of data.
+
+It fails because:
+- signals are not connected
+- actions are not triggered
+- execution is not enforced
+
+Value-in-Motion™ closes that loop.
