@@ -16,7 +16,24 @@ python -m src.risk_agent.main
 
 ### Example Output
 See: examples/risk_agent_output.txt
+[examples/risk_agent_output.txt](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/examples/risk_agent_output.txt)
 
+```
+=== VALUE IN MOTION — RISK AGENT ===
+
+Account: ACME
+Risk: HIGH
+Reasons: Low ICP fit, High deal complexity, Low usage (30d), No workflow integration, Low ROI / value perception, No executive engagement
+Action: Recovery: exec alignment + value proof plan (14 days)
+Breakdown: {'structural': 2, 'adoption': 2, 'renewal': 2}
+--------------------------------------------------
+Account: BETA
+Risk: LOW
+Reasons: No risk signals detected
+Action: Expand: identify next use case + exec value review
+Breakdown: {'structural': 0, 'adoption': 0, 'renewal': 0}
+--------------------------------------------------
+```
 
 # I. Executive Overview
 
