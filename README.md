@@ -8,7 +8,7 @@
 
 ---
 
-### What this is
+## What this is
 
 An autonomous, lifecycle-aware AI system that **detects risk, orchestrates actions, and drives revenue outcomes across Customer Success.**
 
@@ -52,27 +52,43 @@ Why it matters: Customer Success fails not from lack of data, but from lack of e
   
 ---
 
-## Quick Start
-
-Run the risk detection agent locally in seconds:
-
-```bash
-pip install -r requirements.txt
-python -m src.risk_agent.main
-
-```
-
-## Live Demo — Risk Detection Agent (V0)
+## Live Demo — risk_detection_agent (V0)
 
 A working lifecycle-aware agent that detects churn risk across:
 
 **Sales → Adoption → Renewal**
 
+
+**Architecture**
+
+```mermaid
+flowchart TB
+  R[value-in-motion-agent/]
+
+  R --> SRC[src/]
+  R --> EX[examples/]
+  R --> DOC[docs/]
+  R --> REQ[requirements.txt]
+  R --> RD[README.md]
+
+  SRC --> RA[src/risk_agent/]
+  RA --> MAIN[main.py]
+  RA --> AG[agent.py]
+  RA --> SC[schemas.py]
+  RA --> DATA[data/]
+  DATA --> ACC[accounts.json]
+
+  EX --> OUT[risk_agent_output.txt]
+
+  RD -->|links to| OUT
+  RD -->|shows diagram| DOC
+```
+
 Requirements
 - Python 3.10+
 - pip
 
-## Example Output
+## Output Example 
 
 This output shows lifecycle-based risk scoring + recommended recovery action.
 
@@ -87,6 +103,15 @@ Action: Recovery: exec alignment + value proof plan (14 days)
 
 Full output: [`examples/risk_agent_output.txt`](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/examples/risk_agent_output.txt)
 
+
+## Quick Start
+
+Run the risk detection agent locally in seconds:
+
+```bash
+pip install -r requirements.txt
+python -m src.risk_agent.main
+```
 ---
 
 # I. Executive Overview
