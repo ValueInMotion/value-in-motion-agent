@@ -48,7 +48,7 @@ An autonomous, lifecycle-aware AI system that **detects risk, orchestrates actio
 - End-to-end runnable agent (`src/risk_agent`)
 - Deterministic lifecycle scoring model
 - Structured output with explainability
-- - GitHub demo + reproducible CLI execution (`python -m src.risk_agent.main`)
+- GitHub demo + reproducible CLI execution (`python -m src.risk_agent.main`)
   
 ---
 
@@ -61,13 +61,13 @@ A working lifecycle-aware agent that detects churn risk across:
 ### Requirements
 
 - Python 3.10+
-- pip
+- GitHub demo + reproducible CLI execution
 
 ### Run locally
 
 ```bash
-pip install pydantic
-python -m src.risk_agent.main
+- pip install pydantic
++ pip install -r requirements.txt
 ```
 
 ### Example Output
