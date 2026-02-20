@@ -1,5 +1,19 @@
 # Value-in-Motion™: Autonomous Lifecycle Engine for Customer Success
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() [![Platform](https://img.shields.io/badge/platform-Python%20%7C%20Claude-blue)]() [![Framework](https://img.shields.io/badge/framework-LangChain-black)]() [![Orchestration](https://img.shields.io/badge/orchestration-LangGraph-purple)]() [![Observability](https://img.shields.io/badge/observability-LangSmith-orange)]() [![License](https://img.shields.io/badge/license-Proprietary-orange)]()
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() 
+[![Platform](https://img.shields.io/badge/platform-Python%20%7C%20Claude-blue)]() 
+[![Framework](https://img.shields.io/badge/framework-LangChain-black)]() 
+[![Orchestration](https://img.shields.io/badge/orchestration-LangGraph-purple)]() 
+[![Observability](https://img.shields.io/badge/observability-LangSmith-orange)]() 
+[![License](https://img.shields.io/badge/license-Proprietary-orange)]()
+[![License](https://img.shields.io/badge/license-Proprietary-orange)]()
+
+---
+
+## What this is (1-line)
+
+An autonomous, lifecycle-aware AI system that **detects risk, orchestrates actions, and drives revenue outcomes across Customer Success.**
+
+---
 
 ## Live Demo — Risk Detection Agent (V0)
 
@@ -15,25 +29,16 @@ python -m src.risk_agent.main
 ```
 
 ### Example Output
-See: examples/risk_agent_output.txt
-[examples/risk_agent_output.txt](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/examples/risk_agent_output.txt)
 
-```
 === VALUE IN MOTION — RISK AGENT ===
 
 Account: ACME
 Risk: HIGH
-Reasons: Low ICP fit, High deal complexity, Low usage (30d), No workflow integration, Low ROI / value perception, No executive engagement
+Reasons: Low ICP fit, High deal complexity, Low usage (30d), No workflow integration, Low ROI, No executive engagement
 Action: Recovery: exec alignment + value proof plan (14 days)
-Breakdown: {'structural': 2, 'adoption': 2, 'renewal': 2}
---------------------------------------------------
-Account: BETA
-Risk: LOW
-Reasons: No risk signals detected
-Action: Expand: identify next use case + exec value review
-Breakdown: {'structural': 0, 'adoption': 0, 'renewal': 0}
---------------------------------------------------
-```
+
+Full output: examples/risk_agent_output.txt
+[examples/risk_agent_output.txt](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/examples/risk_agent_output.txt)
 
 ---
 
