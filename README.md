@@ -115,7 +115,20 @@ It implements a LangGraph-based state machine that:
 - Token cost tracking
 - Regression testing
 
-## Agentic Layers
+## Agentic Layers:
+
+**Layer 1: Engine**
+- Orchestration
+- Planning
+
+**Layer 2: Policy**
+- Governance
+- Runtime 
+
+**Layer 3: Multi-Agents**
+- risk_agent
+- value_velocity_agent
+- predictive_customer_profile_agent
 
 ![Value in Motion™ CSM Autonomous Agent](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png?raw=true)
 
