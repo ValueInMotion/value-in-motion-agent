@@ -8,12 +8,13 @@
 
 ---
 
-## What this is
+### What this is
 
 An autonomous, lifecycle-aware AI system that **detects risk, orchestrates actions, and drives revenue outcomes across Customer Success.**
-> This is not a dashboard. This is a **decision engine for Customer Success.**
 
-This system operationalizes Customer Success as a **closed-loop execution engine**, not a reporting layer.
+**Why it matters:** Customer Success fails not from lack of data, but from lack of execution. → Turns Customer Success from reactive tracking into proactive execution.
+
+> This is not a dashboard. This is a **decision engine for Customer Success.**
 
 ## Who this is for
 
@@ -47,7 +48,7 @@ This system operationalizes Customer Success as a **closed-loop execution engine
 - End-to-end runnable agent (`src/risk_agent`)
 - Deterministic lifecycle scoring model
 - Structured output with explainability
-- GitHub demo + reproducible results
+- - GitHub demo + reproducible CLI execution (`python -m src.risk_agent.main`)
   
 ---
 
@@ -70,6 +71,8 @@ python -m src.risk_agent.main
 ```
 
 ### Example Output
+
+This output shows lifecycle-based risk scoring + recommended recovery action.
 
 ```text
 === VALUE IN MOTION — RISK AGENT ===
@@ -102,7 +105,7 @@ Most automation tools:
 - Fire isolated tasks
 - Depend heavily on human orchestration
 
-Value in Motion™:
+Value-in-Motion™:
 - Maintains persistent account state
 - Uses graph-based reasoning
 - Gates progress based on data readiness
@@ -377,7 +380,7 @@ Customer Success today:
 - Fragmented
 - Signal-blind
 
-Value in Motion™:
+Value-in-Motion™:
 - Structured
 - Stateful
 - Signal-driven
