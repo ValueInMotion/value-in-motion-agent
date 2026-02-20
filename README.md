@@ -54,12 +54,12 @@ An autonomous, lifecycle-aware AI system that **detects risk, orchestrates actio
 
 ## Quick Start
 
+Run the risk detection agent locally in seconds:
+
 ```bash
 pip install -r requirements.txt
 python -m src.risk_agent.main
 
-```md
-**Why it matters:** Customer Success fails not from lack of data, but from lack of execution.
 ```
 
 ## Live Demo — Risk Detection Agent (V0)
@@ -71,14 +71,11 @@ A working lifecycle-aware agent that detects churn risk across:
 ### Requirements
 
 - Python 3.10+
-- GitHub demo + reproducible CLI execution
+- pip
 
 ### Run locally
 
-```bash
-- pip install pydantic
-+ pip install -r requirements.txt
-```
+pip install -r requirements.txt
 
 ### Example Output
 
