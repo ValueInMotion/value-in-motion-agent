@@ -164,7 +164,7 @@ It implements a LangGraph-based state machine that:
 **Layer 3: Multi-Agents**
 - risk_agent
 - onboarding_agent
-- worflow_integration_agent
+- workflow_integration_agent
 - value_velocity_agent
 - qbr_agent
 - predictive_customer_profile_agent
@@ -321,12 +321,13 @@ Add API keys:
 - LangSmith
 - CRM credentials
 
+---
 # How to Run (Local Demo)
 
 Run a minimal lifecycle simulation locally:
 
 ```bash
-python src/main.py
+python -m src.risk_agent.main
 ```
 
 # X. Vision
