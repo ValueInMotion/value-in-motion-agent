@@ -16,6 +16,8 @@ Why it matters: Customer Success fails not from lack of data, but from lack of e
 
 > This is not a dashboard. This is a **decision engine for Customer Success.**
 
+---
+
 ## Who this is for
 
 - Customer Success Leaders (CSM / CS Ops)
@@ -23,12 +25,16 @@ Why it matters: Customer Success fails not from lack of data, but from lack of e
 - Revenue / GTM teams focused on NRR & expansion
 - AI / Agentic builders in SaaS workflows
 
+---
+
 ## Expected Impact
 
 - +20–40% improvement in Net Revenue Retention (NRR)
 - -30% manual CSM workload
 - Earlier risk detection (30–90 days ahead of renewal)
 - Increased expansion signal visibility
+
+---
 
 ## Current Scope (What works today)
 
@@ -43,6 +49,8 @@ Why it matters: Customer Success fails not from lack of data, but from lack of e
 - ⏳ CRM + telemetry integration
 - ⏳ LLM-based reasoning layer
 
+---
+
 ## Proof
 
 - End-to-end runnable agent (`src/risk_agent`)
@@ -52,18 +60,85 @@ Why it matters: Customer Success fails not from lack of data, but from lack of e
   
 ---
 
-## Live Demo — risk_detection_agent (V0)
+# Live Demo — risk_detection_agent (V0)
 
 A working lifecycle-aware agent that detects churn risk across:
 
 **Sales → Adoption → Renewal**
 
-**Workflow**
-
+## System Flow — Risk Detection Agent
 ![My Image](docs/diagrams/risk_agent.png)
 
+### 1. INPUTS → "Signals enter the system"
 
-**Architecture**
+**Source**
+- `examples/sample_account.json`
+- Later: CRM, telemetry, product usage
+
+**Content**
+- ICP fit
+- Usage metrics
+- Stakeholders
+- Deal complexity
+- ROI signals
+
+This is raw customer reality.
+
+
+### 2. VALIDATION → "Make data usable"
+
+**File:** `schemas.py`
+
+**Responsibilities**
+- Enforces structure (Pydantic)
+- Prevents garbage-in
+- Standardizes signals
+
+This turns raw data into trusted structured input.
+
+
+### 3. DECISION ENGINE → "Think"
+
+**File:** `agent.py`
+
+**Core logic**
+- Score risk (LOW / MEDIUM / HIGH)
+- Identify reasons
+- Map lifecycle stage
+- Recommend action
+
+This is your CS brain (deterministic today).
+
+
+### 4. ORCHESTRATION → "Run the system"
+
+**File:** `main.py`
+
+**Responsibilities**
+- Loads input
+- Calls agent
+- Executes flow
+- Prints result
+
+This is your runtime / entry point.
+
+
+### 5. OUTPUT → "Actionable insight"
+
+**Result**
+- Console output
+- `examples/risk_agent_output.txt`
+
+**Contains**
+- Risk level
+- Reasons
+- Recommended action
+
+This is decision-ready output (not analytics).
+
+---
+
+## Architecture
 
 ```mermaid
 flowchart TB
@@ -116,6 +191,7 @@ Run the risk detection agent locally in seconds:
 pip install -r requirements.txt
 python -m src.risk_agent.main
 ```
+
 ---
 
 # I. Executive Overview
@@ -147,6 +223,7 @@ Value-in-Motion™:
 **↓**  
 **Agent = Lifecycle Executor**
 
+---
 
 # II. Philosophy: Lean Customer Success Flow
 
@@ -162,6 +239,7 @@ We apply Lean (Muda, Mura, Muri) directly to SaaS telemetry.
 
 The agent continuously scans telemetry to detect structural inefficiencies before revenue impact.
 
+---
 
 # III. Domain Logic: The Lifecycle Map
 
@@ -199,6 +277,8 @@ It operates against a **strict lifecycle state machine**, where each phase has:
 - Risk scoring
 - Expansion detection
 - Renewal brief generation
+
+---
 
 # IV. Technical Architecture
 
@@ -252,9 +332,7 @@ It implements a LangGraph-based state machine that:
 - expansion_agent
 - renewal_agent
 
-
 ![Value in Motion CSM Autonomous Agent](docs/diagrams/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png)
-
 
 ## Stateful Orchestration
 
@@ -315,6 +393,7 @@ No multi-agent swarm.
 No heavy ML forecasting.
 Focused lifecycle execution.
 
+---
 
 # V. Repository Structure
 
@@ -350,6 +429,7 @@ Structured for:
 - Eval-driven development
 - CI/CD compatibility
 
+---
 
 # VI. Observability & Evals
 
@@ -364,6 +444,8 @@ The agent is treated as production software.
 
 Every execution is traceable and regression-tested in LangSmith.
 
+---
+
 # VII. MVP Definition
 
 This is not a CRM replacement.
@@ -377,6 +459,7 @@ The MVP succeeds if:
 - Expansion signals surfaced early
 - Lean waste auto-detected
 
+---
 
 # VIII. Proof of Concept
 
@@ -387,6 +470,8 @@ In a Tier-1 deployment:
 - ~$45,000/year inefficiency detected
 - Renewal conversation reframed 6 months early
 - Shift from downsell risk → redeployment strategy
+
+---
 
 # IX. Installation
 
@@ -403,6 +488,7 @@ Add API keys:
 - CRM credentials
 
 ---
+
 # X. Vision
 
 Customer Success today:
