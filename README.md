@@ -5,13 +5,13 @@
 [![Orchestration](https://img.shields.io/badge/orchestration-LangGraph-purple)]() 
 [![Observability](https://img.shields.io/badge/observability-LangSmith-orange)]() 
 [![License](https://img.shields.io/badge/license-Proprietary-orange)]()
-[![License](https://img.shields.io/badge/license-Proprietary-orange)]()
 
 ---
 
-## What this is (1-line)
+## What this is
 
 An autonomous, lifecycle-aware AI system that **detects risk, orchestrates actions, and drives revenue outcomes across Customer Success.**
+> This is not a dashboard. This is a **decision engine for Customer Success.**
 
 ## Who this is for
 
@@ -19,6 +19,34 @@ An autonomous, lifecycle-aware AI system that **detects risk, orchestrates actio
 - SaaS Founders (Series A–C)
 - Revenue / GTM teams focused on NRR & expansion
 - AI / Agentic builders in SaaS workflows
+
+## Expected Impact
+
+- +20–40% improvement in Net Revenue Retention (NRR)
+- -30% manual CSM workload
+- Earlier risk detection (30–90 days ahead of renewal)
+- Increased expansion signal visibility
+
+## Current Scope (What works today)
+
+- ✅ Risk Detection Agent (Sales → Adoption → Renewal)
+- ✅ Lifecycle-based scoring logic
+- ✅ Actionable recommendations
+- ✅ Local execution (Python)
+
+## In Progress
+
+- ⏳ Multi-agent orchestration (LangGraph full lifecycle)
+- ⏳ CRM + telemetry integration
+- ⏳ LLM-based reasoning layer
+
+## Proof
+
+- End-to-end runnable agent (`src/risk_agent`)
+- Deterministic lifecycle scoring model
+- Structured output with explainability
+- GitHub demo + reproducible results
+  
 ---
 
 ## Live Demo — Risk Detection Agent (V0)
