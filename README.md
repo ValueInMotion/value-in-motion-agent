@@ -57,6 +57,11 @@ A working lifecycle-aware agent that detects churn risk across:
 
 **Sales → Adoption → Renewal**
 
+### Requirements
+
+- Python 3.10+
+- pip
+
 ### Run locally
 
 ```bash
