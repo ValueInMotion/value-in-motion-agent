@@ -32,12 +32,17 @@ python -m src.risk_agent.main
 
 === VALUE IN MOTION — RISK AGENT ===
 
-Account: ACME
-Risk: HIGH
-Reasons: Low ICP fit, High deal complexity, Low usage (30d), No workflow integration, Low ROI, No executive engagement
-Action: Recovery: exec alignment + value proof plan (14 days)
+**Account: ACME**
+**Risk: HIGH**
 
-Full output: examples/risk_agent_output.txt
+**Reasons:**
+Low ICP fit, High deal complexity, Low usage (30d), No workflow integration, Low ROI, No executive engagement
+
+**Action:**
+Recovery: exec alignment + value proof plan (14 days)
+
+**Full output:**
+examples/risk_agent_output.txt
 [examples/risk_agent_output.txt](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/examples/risk_agent_output.txt)
 
 ---
