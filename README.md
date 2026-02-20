@@ -127,8 +127,13 @@ It implements a LangGraph-based state machine that:
 
 **Layer 3: Multi-Agents**
 - risk_agent
+- onboarding_agent
+- worflow_integration_agent
 - value_velocity_agent
+- qbr_agent
 - predictive_customer_profile_agent
+- expansion_agent
+- renewal_agent
 
 ![Value in Motion™ CSM Autonomous Agent](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png?raw=true)
 
