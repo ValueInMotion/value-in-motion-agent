@@ -1,1 +1,21 @@
 
+[
+  {
+    "account": "ACME",
+    "icp_score": 40,
+    "deal_complexity": 80,
+    "usage_30d": 20,
+    "workflow_integrated": false,
+    "roi_score": 30,
+    "exec_engagement": false
+  },
+  {
+    "account": "BETA",
+    "icp_score": 85,
+    "deal_complexity": 20,
+    "usage_30d": 70,
+    "workflow_integrated": true,
+    "roi_score": 80,
+    "exec_engagement": true
+  }
+]

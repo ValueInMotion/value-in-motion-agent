@@ -1,1 +1,0 @@
-# Value in Motion™ package
