@@ -12,7 +12,7 @@
 
 An autonomous, lifecycle-aware AI system that **detects risk, orchestrates actions, and drives revenue outcomes across Customer Success.**
 
-**Why it matters:** Customer Success fails not from lack of data, but from lack of execution. → Turns Customer Success from reactive tracking into proactive execution.
+Why it matters: Customer Success fails not from lack of data, but from lack of execution. → Turns Customer Success from reactive tracking into proactive execution.
 
 > This is not a dashboard. This is a **decision engine for Customer Success.**
 
@@ -68,16 +68,11 @@ A working lifecycle-aware agent that detects churn risk across:
 
 **Sales → Adoption → Renewal**
 
-### Requirements
-
+Requirements
 - Python 3.10+
 - pip
 
-### Run locally
-
-pip install -r requirements.txt
-
-### Example Output
+## Example Output
 
 This output shows lifecycle-based risk scoring + recommended recovery action.
 
