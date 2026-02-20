@@ -58,6 +58,10 @@ A working lifecycle-aware agent that detects churn risk across:
 
 **Sales → Adoption → Renewal**
 
+**Workflow**
+
+![My Image](docs/diagrams/risk_agent.png)
+
 
 **Architecture**
 
