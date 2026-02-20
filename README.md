@@ -150,7 +150,8 @@ It implements a LangGraph-based state machine that:
 - expansion_agent
 - renewal_agent
 
-![Value in Motion™ CSM Autonomous Agent](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png?raw=true)
+
+<img src="docs/diagrams/Value in Motion™ CSM Autonomous Agent.png" alt="Value in Motion CSM Autonomous Agent" />
 
 
 ## Stateful Orchestration
