@@ -1,4 +1,4 @@
-# # Value-in-Motion™ — Autonomous Lifecycle Engine
+# Value-in-Motion™ — Autonomous Lifecycle Engine
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() 
 [![Platform](https://img.shields.io/badge/platform-Python%20%7C%20Claude-blue)]() 
 [![Framework](https://img.shields.io/badge/framework-LangChain-black)]() 
@@ -66,8 +66,6 @@ python -m src.risk_agent.main
 
 ### Example Output
 
-### 📊 Example Output
-
 ```text
 === VALUE IN MOTION — RISK AGENT ===
 
@@ -76,6 +74,7 @@ Risk: HIGH
 Reasons: Low ICP fit, High deal complexity, Low usage (30d), No workflow integration, Low ROI, No executive engagement
 Action: Recovery: exec alignment + value proof plan (14 days)
 ```
+
 Full output: [`examples/risk_agent_output.txt`](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/examples/risk_agent_output.txt)
 
 ---
@@ -364,14 +363,6 @@ Add API keys:
 - LangSmith
 - CRM credentials
 
----
-# How to Run (Local Demo)
-
-Run a minimal lifecycle simulation locally:
-
-```bash
-python -m src.risk_agent.main
-```
 ---
 # X. Vision
 
