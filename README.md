@@ -35,6 +35,8 @@ Breakdown: {'structural': 0, 'adoption': 0, 'renewal': 0}
 --------------------------------------------------
 ```
 
+---
+
 # I. Executive Overview
 
 ## What It Is
