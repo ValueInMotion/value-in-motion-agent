@@ -1,6 +1,21 @@
 # Value-in-Motion™: Autonomous Lifecycle Engine for Customer Success
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() [![Platform](https://img.shields.io/badge/platform-Python%20%7C%20Claude-blue)]() [![Framework](https://img.shields.io/badge/framework-LangChain-black)]() [![Orchestration](https://img.shields.io/badge/orchestration-LangGraph-purple)]() [![Observability](https://img.shields.io/badge/observability-LangSmith-orange)]() [![License](https://img.shields.io/badge/license-Proprietary-orange)]()
 
+# Live Use Case — Risk Detection Agent (V0)
+A working lifecycle-aware agent that detects churn risk across:
+
+**Sales → Adoption → Renewal**
+
+### Run locally
+
+```bash
+pip install pydantic
+python -m src.risk_agent.main
+```
+
+**Example Output**
+See: examples/risk_agent_output.txt
+
 # I. Executive Overview
 
 ## What It Is
