@@ -59,15 +59,28 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 ## Current Scope (What works today)
 
 - ✅ Risk Detection Agent (Sales → Adoption → Renewal)
-- ✅ Lifecycle-based scoring logic
+- ✅ Lifecycle-based phase scoring logic
+- ✅ Phase-level diagnostic output (identify broken stage)
 - ✅ Actionable recommendations
-- ✅ Local execution (Python)
+- ✅ Local execution engine (Python)
 
 ## In Progress
 
-- ⏳ Multi-agent orchestration (LangGraph full lifecycle)
+- ⏳ Multi-agent lifecycle orchestration (LangGraph full loop)
 - ⏳ CRM + telemetry integration
-- ⏳ LLM-based reasoning layer
+- ⏳ LLM-powered reasoning layer
+- ⏳ Autonomous execution tools (email, CRM updates, alerts)
+
+---
+
+## Strategic Positioning
+
+Value in Motion™ is not a chatbot.
+It is a **Revenue Operating System** ensuring value flows continuously from:
+
+**Intent → Outcomes → Adoption → Impact → Expansion → Reinvestment**
+
+When value flows, revenue follows.
 
 ---
 
