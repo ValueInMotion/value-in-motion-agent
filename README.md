@@ -149,7 +149,7 @@ File: `agent.py`
 &rarr; Orcchestrate Value-in-Motion™ framework
 
 
-***#5. OUTPUT — Decision-Ready Insight**
+**#5. OUTPUT — Decision-Ready Insight**
 
 === VALUE IN MOTION — RISK AGENT ===
 
@@ -284,6 +284,8 @@ It is:
 
 # II. Value-in-Motion™Architecture
 
+## 1. Autonomous Agentic Layer
+
 **#1. Action Library Layer**
 
 - 4 Stages:  
@@ -302,16 +304,17 @@ It is:
 - APPROVAL REQUIRED (CSM must approve)
 - BLOCKED (never allowed)
 
-**#3. Persistence Layer**
+**#3. Autonomous Layer**
 
-- **Autonomy = Planner × State × Loop × Tools × Policy**  
+- **Autonomous = Planner × State × Loop × Tools × Policy**  
   
 - **Planner:** Reasoning Engine
 - **State:** Memory + Context
 - **Orchestration (Loop):** Detect → Decide → Act → Observe → Update → Repeat
 - **Tools:** CRM (Salesforce), Telemetry (Quicksign), UX behavior (Pendo), CS SaaS (Planhat), MCP, API, DB...
+  
 
-**Stack logic:**
+> **Stack logic:**
 
 - LangGraph → Orchestrates agents
 Builds stateful workflows, loops, and decision flows.
@@ -365,7 +368,7 @@ flowchart TB
     Human -->|Reject| Replan[Re-Reason Strategy]
 ```
 
-## Tech Stack (MVP)
+## 2. Tech Stack (MVP)
 
 - **Orchestration**: LangGraph (Python)
 - **LLM**: Claude 3.5 Sonnet / GPT-4o
@@ -380,7 +383,7 @@ Focused lifecycle execution.
 
 ---
 
-# 9. Repository Structure
+## 3. Repository Structure
 
 ```css
 value-in-motion-agent/
@@ -415,7 +418,7 @@ Structured for:
 - CI/CD compatibility
 
 
-### Use Case Repository Flow Chart
+## 4. Use Case: risk-agent Repository Flow Chart
 
 ```mermaid
 flowchart TB
@@ -442,7 +445,7 @@ flowchart TB
 
 ---
 
-# 10. Observability & Evals
+## 5. Observability & Evals
 
 The agent is treated as production software.
 
@@ -457,7 +460,7 @@ Every execution is traceable and regression-tested in LangSmith.
 
 ---
 
-# 11. Installation
+## 6. Installation
 
 ```bash
 git clone https://github.com/ValueInMotion/value-in-motion-agent.git
