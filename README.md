@@ -275,88 +275,13 @@ Value-in-Motion™ is not:
 It is:
 
 →  An Autonomous Customer Success Operating System
----
-
-# I. Executive Overview
-
-## What It Is
-
-**Value-in-Motion™** is an event-driven, stateful autonomous AI agent that executes the full Customer Success lifecycle:
-
-**Sales Handoff → Onboarding → Adoption → Risk Management → Renewal → Expansion**
-
-It transforms Customer Success from reactive relationship management into a structured, signal-driven revenue engine.
-
-
-## What Makes It Different
-
-Most automation tools:
-- Trigger linear workflows
-- Fire isolated tasks
-- Depend heavily on human orchestration
-
-Value-in-Motion™:
-- Maintains persistent account state
-- Uses graph-based reasoning
-- Gates progress based on data readiness
-- Loops until success criteria are met
-- Acts — not just suggests
-
-**Human = Supervisor**  
-**↓**  
-**Agent = Lifecycle Executor**
 
 ---
 
-# III. Domain Logic: The Lifecycle Map
-
-The agent does not hallucinate arbitrary actions.
-
-It operates against a **strict lifecycle state machine**, where each phase has:
-- Required anchors
-- Gated transitions
-- Exit criteria
-- Escalation logic
-  
-## Customer Success Lifecycle Phases (MVP)
-**1. Handoff Audit**
-- Validate contract & opportunity data
-- Identify missing anchors
-- Detect expectation gaps
-
-**2. Diagnostic Phase**
-- Stakeholder mapping
-- Pain metric validation
-- Risk detection
-
-**3. Success Plan Construction**
-- 30-60-90 roadmap
-- KPI alignment
-- Value hypothesis
-
-**4. Velocity Monitoring**
-- TTV metrics
-- License utilization
-- Engagement signals
-- Next Best Action queue
-
-**5. Pre-Renewal Orchestration**
-- Risk scoring
-- Expansion detection
-- Renewal brief generation
-
 ---
 
-# IV. Technical Architecture
 
-It implements a LangGraph-based state machine that:
-- Each account has persistent state
-- The agent reasons across days/weeks
-- Progression is gated
-- Loops resolve missing data
-- Human approval can be injected
-
-## Architecture Layers
+# Value-in-Motion™Architecture Layers
 
 **1. Experience Layer**
 - Slack
@@ -462,7 +387,7 @@ Focused lifecycle execution.
 
 ---
 
-# V. Repository Structure
+# Repository Structure
 
 ```css
 value-in-motion-agent/
@@ -524,7 +449,7 @@ flowchart TB
 
 ---
 
-# VI. Observability & Evals
+# Observability & Evals
 
 The agent is treated as production software.
 
@@ -539,34 +464,7 @@ Every execution is traceable and regression-tested in LangSmith.
 
 ---
 
-# VII. MVP Definition
-
-This is not a CRM replacement.
-
-This is an autonomous lifecycle execution engine.
-
-The MVP succeeds if:
-- ≥30% time saved per CSM
-- No dropped stakeholder
-- Renewal brief generated ≥80% relevance
-- Expansion signals surfaced early
-- Lean waste auto-detected
-
----
-
-# VIII. Proof of Concept
-
-**The Agentic Audit**
-
-In a Tier-1 deployment:
-- 75% unused license capacity identified (Muda)
-- ~$45,000/year inefficiency detected
-- Renewal conversation reframed 6 months early
-- Shift from downsell risk → redeployment strategy
-
----
-
-# IX. Installation
+# Installation
 
 ```bash
 git clone https://github.com/ValueInMotion/value-in-motion-agent.git
@@ -581,48 +479,3 @@ Add API keys:
 - CRM credentials
 
 ---
-
-# X. Vision
-
-Customer Success today:
-- Manual
-- Reactive
-- Fragmented
-- Signal-blind
-
-Value-in-Motion™:
-- Structured
-- Stateful
-- Signal-driven
-- Autonomous
-- Expansion-oriented
-
-From relationship management
-**→ To autonomous revenue orchestration.**
-
----
-
-## 🧠 Positioning
-
-Value-in-Motion™ is not:
-
-- a CRM  
-- a dashboard  
-- a reporting tool  
-
-It is:
-
-👉 **An Autonomous Customer Success Operating System**
-
----
-
-## Key Insight
-
-Customer Success does not fail because of lack of data.
-
-It fails because:
-- signals are not connected
-- actions are not triggered
-- execution is not enforced
-
-Value-in-Motion™ closes that loop.
