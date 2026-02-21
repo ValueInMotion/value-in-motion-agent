@@ -8,7 +8,7 @@
 
 ---
 
-## What this is
+## What It Is
 
 **An autonomous, lifecycle-aware AI Revenue Operating System for Customer Success.**
 
@@ -18,9 +18,12 @@ It operates in closed loops:
 
 **Detect → Diagnose → Decide → Act → Observe → Improve**
 
+> This is not a dashboard.  
+> This is a **lifecycle decision and execution engine** for Customer Success.
+
 ---
 
-## Why it matters
+## Why It Matters
 
 Customer Success does not fail from lack of data.
 It fails from lack of structured execution.
@@ -32,16 +35,14 @@ Most teams:
 
 Value in Motion™ transforms Customer Success from reactive tracking to **proactive revenue orchestration**.
 
-> This is not a dashboard. This is a **lifecycle decision and execution engine** for Customer Success.
-
 ---
 
-## Who this is for
+## Who It Is For
 
-- Customer Success Leaders (CSM / CS Ops)
-- SaaS Founders (Series A–C)
-- Revenue / GTM teams focused on NRR & expansion
-- AI / Agentic builders in SaaS workflows
+- **Customer Success Leaders (CSM / CS Ops)** scaling retention and operational rigor
+- **Series A–C SaaS Founders** building predictable revenue engines
+- **Revenue & GTM teams** focused on NRR and expansion
+- **AI / Agentic builders** designing autonomous SaaS workflows
 
 ---
 
