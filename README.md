@@ -211,13 +211,70 @@ Risk = friction in one of these phases.
 - **Telemetry:** Pandas / SQL
 - **Execution Layer:** Python runtime
 
-Structured for:
--Unit testing
--Integration testing
--Eval-driven development
+Structured for:  
+- Unit testing
+- Integration testing
+- Eval-driven development
 - CI/CD readiness
 
 ---
+
+# What Makes It Different
+- Most automation:
+- Linear workflows
+- Static triggers
+- Human-dependent orchestration
+
+Value-in-Motion™:
+- Stateful lifecycle reasoning
+- Persistent account memory
+- Gated phase transitions
+- Loop resolution until criteria met
+- Human-in-the-loop governance
+
+Human = Supervisor
+Agent = Lifecycle Executor
+
+---
+
+# MVP Success Criteria
+
+- ≥30% time saved per CSM
+- Renewal brief auto-generated with ≥80% relevance
+- Expansion surfaced before renewal window
+- Lean waste auto-detected
+- No dropped stakeholder
+
+---
+# Vision
+
+Customer Success today:
+- Reactive
+- Fragmented
+- Signal-blind
+
+Value-in-Motion™:
+- Structured
+- Stateful
+- Signal-driven
+- Autonomous
+- Expansion-oriented
+
+From relationship management  
+→ To autonomous revenue orchestration.
+
+---
+
+# Positioning
+
+Value-in-Motion™ is not:
+- a CRM
+- a dashboard
+- a reporting tool
+
+It is:
+
+→  An Autonomous Customer Success Operating System
 ---
 
 # I. Executive Overview
