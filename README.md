@@ -313,19 +313,19 @@ It is:
 - **Orchestration (Loop):** Detect → Decide → Act → Observe → Update → Repeat
 - **Tools:** CRM (Salesforce), Telemetry (Quicksign), UX behavior (Pendo), CS SaaS (Planhat), MCP, API, DB...
   
+---
 
-> **Stack logic:**
+## 2. Tech Stack (MVP)
 
-- LangGraph → Orchestrates agents
-Builds stateful workflows, loops, and decision flows.
-
-- LangSmith → Monitors agents
-Traces, evaluates, and debugs LLM behavior.
-
-- LlamaIndex → Connects data
-Retrieves documents, CRM data, telemetry (RAG layer).
+- **Orchestration**: LangGraph (Python)
+- **LLM**: Claude 3.5 Sonnet / GPT-4o
+- **Framework**: LangChain
+- **Observability**: LangSmith
+- **Data Sources**: Salesforce / Planhat / Snowflake / LlamaIndex
+- **Telemetry Analysis**: Pandas / SQL
   
 ![Value in Motion CSM Autonomous Agent](docs/diagrams/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png)
+
 
 **Stateful Orchestration**
 
@@ -367,19 +367,6 @@ flowchart TB
     Human -->|Approve| Action[Execute Mitigation]
     Human -->|Reject| Replan[Re-Reason Strategy]
 ```
-
-## 2. Tech Stack (MVP)
-
-- **Orchestration**: LangGraph (Python)
-- **LLM**: Claude 3.5 Sonnet / GPT-4o
-- **Framework**: LangChain
-- **Observability**: LangSmith
-- **Data Sources**: Salesforce / Planhat / Snowflake
-- **Telemetry Analysis**: Pandas / SQL
-
-No multi-agent swarm.
-No heavy ML forecasting.
-Focused lifecycle execution.
 
 ---
 
@@ -468,10 +455,5 @@ cd value-in-motion-agent
 pip install -r requirements.txt
 cp .env.example .env
 ```
-
-Add API keys:
-- Anthropic / OpenAI
-- LangSmith
-- CRM credentials
 
 ---
