@@ -48,10 +48,11 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 
 ## Expected Impact
 
-- +20–40% improvement in Net Revenue Retention (NRR)
-- -30% manual CSM workload
-- Earlier risk detection (30–90 days ahead of renewal)
-- Increased expansion signal visibility
+- **-+20–40% Net Revenue Retention uplift**
+- **–30% manual CSM workload**
+- **30–90 days earlier renewal risk detection**
+- **Stronger expansion signal visibility**
+- **Structured lifecycle governance**
 
 ---
 
