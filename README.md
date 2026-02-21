@@ -18,20 +18,21 @@ It operates in closed loops:
 
 **Detect → Diagnose → Decide → Act → Observe → Improve**
 
-> This is not a dashboard.  
-> This is a **lifecycle decision and execution engine** for Customer Success.
+> Not a dashboard.  
+> Not a chatbot.  
+> A lifecycle decision and execution engine.  
 
 ---
 
 ## Why It Matters
 
-Customer Success does not fail from lack of data.
-It fails from lack of structured execution.
+Customer Success does not fail due to a lack of data.
+It fails due to a lack of structured execution.
 
-Most teams:
+Most CS teams:
 - Track health scores
 - React to churn signals
-- Manually coordinate workflows
+- Coordinate manually across tools
 
 Value in Motion™ transforms Customer Success from reactive tracking to **proactive revenue orchestration**.
 
@@ -78,96 +79,86 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 Value in Motion™ is not a chatbot.
 It is a **Revenue Operating System** ensuring value flows continuously from:
 
-**Intent → Outcomes → Adoption → Impact → Expansion → Reinvestment**
+**Intent → Outcomes → Adoption → Impact → ROI → Expansion → Reinvestment → Renewal**
 
 When value flows, revenue follows.
 
 ---
 
-## Proof
-
-- End-to-end runnable agent (`src/risk_agent`)
-- Deterministic lifecycle scoring model
-- Structured output with explainability
-- GitHub demo + reproducible CLI execution (`python -m src.risk_agent.main`)
-  
----
-
 # Live Demo — risk_detection_agent (V0)
 
-A working lifecycle-aware agent that detects churn risk across:
+A runnable lifecycle-aware agent detecting churn risk across:
 
 **Sales → Adoption → Renewal**
+
+Run locally:
+pip install -r requirements.txt
+python -m src.risk_agent.main
 
 ## System Flow — Risk Detection Agent
 ![My Image](docs/diagrams/risk_agent.png)
 
-### 1. INPUTS → "Signals enter the system"
+### 1. INPUTS — Signals Enter the System
 
 **Source**
 - `examples/sample_account.json`
-- Later: CRM, telemetry, product usage
+- (future: CRM, telemetry, product usage)
 
-**Content**
+**Signals**
 - ICP fit
 - Usage metrics
 - Stakeholders
 - Deal complexity
 - ROI signals
 
-This is raw customer reality.
+&rarr; Raw customer reality.
 
 
-### 2. VALIDATION → "Make data usable"
+### 2. VALIDATION — Structured Input
 
 **File:** `schemas.py`
 
-**Responsibilities**
-- Enforces structure (Pydantic)
-- Prevents garbage-in
-- Standardizes signals
+- Pydantic validation
+- Data standardization
+- Garbage-in protection
 
-This turns raw data into trusted structured input.
+&rarr; Turns signals into a trusted state.
 
 
-### 3. DECISION ENGINE → "Think"
+### 3. DECISION ENGINE — Lifecycle Diagnosis
 
 **File:** `agent.py`
 
-**Core logic**
-- Score risk (LOW / MEDIUM / HIGH)
-- Identify reasons
-- Map lifecycle stage
-- Recommend action
+- Risk scoring (LOW / MEDIUM / HIGH)
+- Root cause detection
+- Phase break mapping
+- Recommended corrective motion
 
-This is your CS brain (deterministic today).
+&rarr; This is the deterministic lifecycle brain &rarr;  probabilistic AI
 
 
-### 4. ORCHESTRATION → "Run the system"
+### 4. ORCHESTRATION — Execution Runtime
 
 **File:** `main.py`
 
-**Responsibilities**
-- Loads input
-- Calls agent
-- Executes flow
-- Prints result
+- Load signals
+- Invoke agent
+- Output structured decision
 
-This is your runtime / entry point.
+&rarr; Orcchestrate Value-in-Motion™ framework
 
 
-### 5. OUTPUT → "Actionable insight"
+### 5. OUTPUT — Decision-Ready Insight
 
-**Result**
-- Console output
-- `examples/risk_agent_output.txt`
+=== VALUE IN MOTION — RISK AGENT ===
 
-**Contains**
-- Risk level
-- Reasons
-- Recommended action
+Account: ACME
+Risk: HIGH
+Reasons: Low ICP fit, High deal complexity, Low usage (30d), No workflow integration, No executive engagement
+Action: Recovery: exec alignment + value proof plan (14 days)
 
-This is decision-ready output (not analytics).
+&rarr; Not analytics.  
+&rarr; Actionable motion.
 
 ---
 
