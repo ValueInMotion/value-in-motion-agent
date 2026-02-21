@@ -10,11 +10,12 @@
 
 ## What this is
 
-An autonomous, lifecycle-aware AI system that **detects risk, orchestrates actions, and drives revenue outcomes across Customer Success.**
+**An autonomous, lifecycle-aware AI system that detects value friction, anticipates risk, and orchestrates targeted actions to drive measurable revenue outcomes across Customer Success.**
 
-Why it matters: Customer Success fails not from lack of data, but from lack of execution. → Turns Customer Success from reactive tracking into proactive execution.
+**Why it matters:** Customer Success doesn’t fail from lack of data — it fails from lack of structured execution.
+Value in Motion™ transforms Customer Success from reactive tracking to proactive, closed-loop execution.
 
-> This is not a dashboard. This is a **decision engine for Customer Success.**
+> This is not a dashboard. This is a **lifecycle decision and execution engine** for Customer Success.
 
 ---
 
