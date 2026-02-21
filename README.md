@@ -8,7 +8,7 @@
 
 ---
 
-## What It Is
+# 1. What It Is
 
 **An autonomous, lifecycle-aware AI Revenue Operating System for Customer Success.**
 
@@ -24,7 +24,7 @@ It operates in closed loops:
 
 ---
 
-## Why It Matters
+# 2. Why It Matters
 
 Customer Success does not fail due to a lack of data.
 It fails due to a lack of structured execution.
@@ -38,7 +38,7 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 
 ---
 
-## Who It Is For
+# 3. Who It Is For
 
 - **Customer Success Leaders (CSM / CS Ops)** scaling retention and operational rigor
 - **Series A–C SaaS Founders** building predictable revenue engines
@@ -47,7 +47,7 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 
 ---
 
-## Expected Impact
+# 4. Expected Impact
 
 - **-+20–40% Net Revenue Retention uplift**
 - **–30% manual CSM workload**
@@ -57,7 +57,7 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 
 ---
 
-## Current Scope (What works today)
+# 5. Current Scope (What works today)
 
 - ✅ Risk Detection Agent (Sales → Adoption → Renewal)
 - ✅ Lifecycle-based phase scoring logic
@@ -74,7 +74,7 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 
 ---
 
-## Strategic Positioning
+# 6. Strategic Positioning
 
 Value in Motion™ is not a chatbot.
 It is a **Revenue Operating System** ensuring value flows continuously from:
@@ -85,7 +85,7 @@ When value flows, revenue follows.
 
 ---
 
-# Live Demo — risk_detection_agent (V0)
+# 7. Live Demo — risk_detection_agent (V0)
 
 A runnable lifecycle-aware agent detecting churn risk across:
 
@@ -281,7 +281,7 @@ It is:
 ---
 
 
-# Value-in-Motion™Architecture Layers
+# 8. Value-in-Motion™Architecture Layers
 
 **1. Experience Layer**
 - Slack
@@ -387,7 +387,7 @@ Focused lifecycle execution.
 
 ---
 
-# Repository Structure
+# 9. Repository Structure
 
 ```css
 value-in-motion-agent/
@@ -449,7 +449,7 @@ flowchart TB
 
 ---
 
-# Observability & Evals
+# 10. Observability & Evals
 
 The agent is treated as production software.
 
@@ -464,7 +464,7 @@ Every execution is traceable and regression-tested in LangSmith.
 
 ---
 
-# Installation
+# 11. Installation
 
 ```bash
 git clone https://github.com/ValueInMotion/value-in-motion-agent.git
