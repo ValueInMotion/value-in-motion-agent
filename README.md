@@ -158,64 +158,66 @@ Reasons: Low ICP fit, High deal complexity, Low usage (30d), No workflow integra
 Action: Recovery: exec alignment + value proof plan (14 days)
 
 &rarr; Not analytics.  
-&rarr; Actionable motion.
-
+&rarr; Actionable motion. 
+ 
 ---
 
-## Architecture
+# Core Architecture
 
 ```mermaid
 flowchart TB
-  R[value-in-motion-agent/]
+  A[Signals] --> B[Validation Layer]
+  B --> C[Lifecycle Diagnosis Engine]
+  C --> D[Phase Break Detection]
+  D --> E[Corrective Motion Recommendation]
+  E --> F[Execution Layer]
+  F --> G[Observation Loop]
+  G --> C
+  ```
 
-  R --> SRC[src/]
-  R --> EX[examples/]
-  R --> DOC[docs/]
-  R --> REQ[requirements.txt]
-  R --> RD[README.md]
+# Lifecycle Model
 
-  SRC --> RA[src/risk_agent/]
-  RA --> MAIN[main.py]
-  RA --> AG[agent.py]
-  RA --> SC[schemas.py]
-  RA --> DATA[data/]
-  DATA --> ACC[accounts.json]
+The agent operates against a strict lifecycle state machine:
 
-  EX --> OUT[risk_agent_output.txt]
+**Intent → Outcomes → Workflow → Operational Change → Adoption → Usage → Impact → Value → Expansion → Executive Validation → Reinvestment**
 
-  RD -->|links to| OUT
-  RD -->|shows diagram| DOC
-```
+Risk = friction in one of these phases.
 
-Requirements
-- Python 3.10+
-- pip
+> High Risk ≠ churn prediction.  
+> High Risk = broken value flow.
 
-## Output Example 
+---
 
-This output shows lifecycle-based risk scoring + recommended recovery action.
+# Lean Philosophy — Zero Waste CS
 
-```text
-=== VALUE IN MOTION — RISK AGENT ===
+> Applying Lean (Muda, Mura, Muri) to SaaS telemetry:  
 
-Account: ACME
-Risk: HIGH
-Reasons: Low ICP fit, High deal complexity, Low usage (30d), No workflow integration, Low ROI, No executive engagement
-Action: Recovery: exec alignment + value proof plan (14 days)
-```
+| Lean Concept         | SaaS Reality      | Agent Response               |
+| -------------------- | ----------------- | ---------------------------- |
+| Muda (Waste)         | Shelfware         | License optimization plan    |
+| Mura (Inconsistency) | Adoption gaps     | Targeted enablement workflow |
+| Muri (Overload)      | Escalation spikes | Pre-renewal mitigation       |
 
-Full output: [`examples/risk_agent_output.txt`](https://github.com/ValueInMotion/value-in-motion-agent/blob/main/examples/risk_agent_output.txt)
+> The agent scans continuously for structural inefficiency before revenue impact.  
 
+---
 
-## Quick Start
+# Technical Stack (MVP)
 
-Run the risk detection agent locally in seconds:
+- **Orchestration:** LangGraph
+- **LLM Layer:** Claude / GPT
+- **Framework:** LangChain
+- **Observability:** LangSmith
+- **Telemetry:** Pandas / SQL
+- **Execution Layer:** Python runtime
 
-```bash
-pip install -r requirements.txt
-python -m src.risk_agent.main
-```
+Structured for:
+-Unit testing
+-Integration testing
+-Eval-driven development
+- CI/CD readiness
 
+---
 ---
 
 # I. Executive Overview
@@ -246,22 +248,6 @@ Value-in-Motion™:
 **Human = Supervisor**  
 **↓**  
 **Agent = Lifecycle Executor**
-
----
-
-# II. Philosophy: Lean Customer Success Flow
-
-Customer Success waste leads to churn.
-
-We apply Lean (Muda, Mura, Muri) directly to SaaS telemetry.
-
-| Lean Concept             | SaaS Equivalent                     | Agentic Response                                   |
-| ------------------------ | ----------------------------------- | -------------------------------------------------- |
-| **Muda (Waste)**         | Shelfware / unused licenses         | Auto-audit + License Optimization Plan             |
-| **Mura (Inconsistency)** | Erratic adoption patterns           | Usage gap detection + Targeted enablement workflow |
-| **Muri (Overburden)**    | Ticket spikes / escalation overload | Risk correlation + Pre-renewal alert               |
-
-The agent continuously scans telemetry to detect structural inefficiencies before revenue impact.
 
 ---
 
@@ -452,6 +438,32 @@ Structured for:
 - Integration testing
 - Eval-driven development
 - CI/CD compatibility
+
+
+### Use Case Repository Flow Chart
+
+```mermaid
+flowchart TB
+  R[value-in-motion-agent/]
+
+  R --> SRC[src/]
+  R --> EX[examples/]
+  R --> DOC[docs/]
+  R --> REQ[requirements.txt]
+  R --> RD[README.md]
+
+  SRC --> RA[src/risk_agent/]
+  RA --> MAIN[main.py]
+  RA --> AG[agent.py]
+  RA --> SC[schemas.py]
+  RA --> DATA[data/]
+  DATA --> ACC[accounts.json]
+
+  EX --> OUT[risk_agent_output.txt]
+
+  RD -->|links to| OUT
+  RD -->|shows diagram| DOC
+```
 
 ---
 
