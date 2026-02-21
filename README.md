@@ -99,13 +99,13 @@ python -m src.risk_agent.main
 
 ![My Image](docs/diagrams/risk_agent.png)
 
-### #1. INPUTS — Signals Enter the System
+**#1. INPUTS — Signals Enter the System**
 
-**Source**
+Source
 - `examples/sample_account.json`
 - (future: CRM, telemetry, product usage)
 
-**Signals**
+Signals
 - ICP fit
 - Usage metrics
 - Stakeholders
@@ -115,9 +115,9 @@ python -m src.risk_agent.main
 &rarr; Raw customer reality.
 
 
-### #2. VALIDATION — Structured Input
+**#2. VALIDATION — Structured Input**
 
-**File:** `schemas.py`
+File: `schemas.py`
 
 - Pydantic validation
 - Data standardization
@@ -126,9 +126,9 @@ python -m src.risk_agent.main
 &rarr; Turns signals into a trusted state.
 
 
-### #3. DECISION ENGINE — Lifecycle Diagnosis
+**#3. DECISION ENGINE — Lifecycle Diagnosis**
 
-**File:** `agent.py`
+File: `agent.py`
 
 - Risk scoring (LOW / MEDIUM / HIGH)
 - Root cause detection
@@ -138,7 +138,7 @@ python -m src.risk_agent.main
 &rarr; This is the deterministic lifecycle brain &rarr;  probabilistic AI
 
 
-### #4. ORCHESTRATION — Execution Runtime
+**#4. ORCHESTRATION — Execution Runtime**
 
 **File:** `main.py`
 
@@ -149,7 +149,7 @@ python -m src.risk_agent.main
 &rarr; Orcchestrate Value-in-Motion™ framework
 
 
-### #5. OUTPUT — Decision-Ready Insight
+***#5. OUTPUT — Decision-Ready Insight**
 
 === VALUE IN MOTION — RISK AGENT ===
 
@@ -222,7 +222,7 @@ Structured for:
 
 ## 12. What Makes It Different
 
-- Most automation:
+Most automation:
 - Linear workflows
 - Static triggers
 - Human-dependent orchestration
@@ -281,68 +281,52 @@ It is:
 
 ---
 
----
-
 
 # II. Value-in-Motion™Architecture
 
-## 1. Operational Layer
+**#1. Action Library Layer**
 
-- Experience Layer
-- Slack
-- Email
-- CRM (Salesforce / Planhat)
-
-## 2. Agent Runtime Layer (LangGraph)
-
-- Phase router
-- Conditional gates
-- Loop resolution
-- Risk branching
-
-## 3. Persistence Layer
-
-- Account state (Phase, Risk Score, Missing Anchors)
-- Checkpointers
-
-## 4. Observability Layer (LangSmith)
-
-- Execution traces
-- Hallucination detection
-- Token cost tracking
-- Regression testing
+- 4 Stages:  
+**→ Hands-off → Onboarding → Value Realization → Renewal/Expansion**
   
+- 11 Phases:  
+**→ Transition → Kickoff → Workflow Integration → Orchestration → Observatory → Risk Mitigation  → Churn → Value ROI → Renewal/Upsell → Advocacy → VoC**
+    
+- 44 Steps:  
+**→ Action Library**
 
-**Agentic Layers**
 
-**Layer 1: Engine**
-- Orchestration
-- Planning
+**#2. Policy Governance Layer**
 
-**Layer 2: Policy**
-- Governance
-- Runtime 
+- AUTO (can run alone)
+- APPROVAL REQUIRED (CSM must approve)
+- BLOCKED (never allowed)
 
-**Layer 3: Multi-Agents**
-- risk_agent
-- onboarding_agent
-- workflow_integration_agent
-- value_velocity_agent
-- qbr_agent
-- predictive_customer_profile_agent
-- expansion_agent
-- renewal_agent
+**#3. Persistence Layer**
 
+- **Autonomy = Planner × State × Loop × Tools × Policy**  
+  
+- **Planner:** Reasoning Engine
+- **State:** Memory + Context
+- **Orchestration (Loop):** Detect → Decide → Act → Observe → Update → Repeat
+- **Tools:** CRM (Salesforce), Telemetry (Quicksign), UX behavior (Pendo), CS SaaS (Planhat), MCP, API, DB...
+
+**Stack logic:**
+
+- LangGraph → Orchestrates agents
+Builds stateful workflows, loops, and decision flows.
+
+- LangSmith → Monitors agents
+Traces, evaluates, and debugs LLM behavior.
+
+- LlamaIndex → Connects data
+Retrieves documents, CRM data, telemetry (RAG layer).
+  
 ![Value in Motion CSM Autonomous Agent](docs/diagrams/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png)
 
 **Stateful Orchestration**
 
 This system moves beyond simple "Trigger -> Action" automation. It uses LangGraph to implement a State Machine. The agent has a "Long-Term Memory" (State) for each account and persists context across days or weeks.
-
-**Architecture Layers**:
-1. **Experience Layer**: Human interaction via Slack, Email, and CRM (Salesforce/Planhat).
-2. **Agent Layer** (LangGraph): The runtime brain. Handles branching, loops, and "Human-in-the-loop" gates.
-3. **Engineering Layer** (LangSmith): Control plane for tracing execution, debugging agent reasoning, and running regression tests.
 
 ```mermaid
 flowchart TB
