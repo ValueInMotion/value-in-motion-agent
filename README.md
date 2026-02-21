@@ -1,4 +1,4 @@
-# Value-in-Motion™ — Autonomous Lifecycle Engine
+# I. Value-in-Motion™ — Autonomous Lifecycle Engine
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() 
 [![Platform](https://img.shields.io/badge/platform-Python%20%7C%20Claude-blue)]() 
 [![Framework](https://img.shields.io/badge/framework-LangChain-black)]() 
@@ -8,7 +8,7 @@
 
 ---
 
-# 1. What It Is
+## 1. What It Is
 
 **An autonomous, lifecycle-aware AI Revenue Operating System for Customer Success.**
 
@@ -24,7 +24,7 @@ It operates in closed loops:
 
 ---
 
-# 2. Why It Matters
+## 2. Why It Matters
 
 Customer Success does not fail due to a lack of data.
 It fails due to a lack of structured execution.
@@ -38,7 +38,7 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 
 ---
 
-# 3. Who It Is For
+## 3. Who It Is For
 
 - **Customer Success Leaders (CSM / CS Ops)** scaling retention and operational rigor
 - **Series A–C SaaS Founders** building predictable revenue engines
@@ -47,7 +47,7 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 
 ---
 
-# 4. Expected Impact
+## 4. Expected Impact
 
 - **-+20–40% Net Revenue Retention uplift**
 - **–30% manual CSM workload**
@@ -57,7 +57,7 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 
 ---
 
-# 5. Current Scope (What works today)
+## 5. Current Scope (What works today)
 
 - ✅ Risk Detection Agent (Sales → Adoption → Renewal)
 - ✅ Lifecycle-based phase scoring logic
@@ -65,7 +65,7 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 - ✅ Actionable recommendations
 - ✅ Local execution engine (Python)
 
-## In Progress
+**In Progress** 
 
 - ⏳ Multi-agent lifecycle orchestration (LangGraph full loop)
 - ⏳ CRM + telemetry integration
@@ -74,7 +74,7 @@ Value in Motion™ transforms Customer Success from reactive tracking to **proac
 
 ---
 
-# 6. Strategic Positioning
+## 6. Strategic Positioning
 
 Value in Motion™ is not a chatbot.
 It is a **Revenue Operating System** ensuring value flows continuously from:
@@ -85,7 +85,7 @@ When value flows, revenue follows.
 
 ---
 
-# 7. Live Demo — risk_detection_agent (V0)
+## 7. Live Demo — risk_detection_agent (V0)
 
 A runnable lifecycle-aware agent detecting churn risk across:
 
@@ -95,7 +95,8 @@ Run locally:
 pip install -r requirements.txt
 python -m src.risk_agent.main
 
-## System Flow — Risk Detection Agent
+**System Flow — Risk Detection Agent**
+
 ![My Image](docs/diagrams/risk_agent.png)
 
 ### #1. INPUTS — Signals Enter the System
@@ -162,7 +163,7 @@ Action: Recovery: exec alignment + value proof plan (14 days)
  
 ---
 
-# 8. Core Architecture
+## 8. Core Architecture
 
 ```mermaid
 flowchart TB
@@ -175,7 +176,7 @@ flowchart TB
   G --> C
   ```
 
-# 9. Lifecycle Model
+## 9. Lifecycle Model
 
 The agent operates against a strict lifecycle state machine:
 
@@ -188,7 +189,7 @@ Risk = friction in one of these phases.
 
 ---
 
-# 10. Lean Philosophy — Zero Waste CS
+## 10. Lean Philosophy — Zero Waste CS
 
 > Applying Lean (Muda, Mura, Muri) to SaaS telemetry:  
 
@@ -202,7 +203,7 @@ Risk = friction in one of these phases.
 
 ---
 
-# 11. Technical Stack (MVP)
+## 11. Technical Stack (MVP)
 
 - **Orchestration:** LangGraph
 - **LLM Layer:** Claude / GPT
@@ -219,7 +220,7 @@ Structured for:
 
 ---
 
-# 12. What Makes It Different
+## 12. What Makes It Different
 
 - Most automation:
 - Linear workflows
@@ -238,17 +239,17 @@ Agent = Lifecycle Executor
 
 ---
 
-# 13. MVP Success Criteria
+## 13. MVP Success Criteria
 
 - ≥30% time saved per CSM
 - Renewal brief auto-generated with ≥80% relevance
-- Expansion surfaced before renewal window
+- Expansion surfaced before the renewal window
 - Lean waste auto-detected
 - No dropped stakeholder
 
 ---
 
-# 14. Vision
+## 14. Vision
 
 Customer Success today:
 - Reactive
@@ -267,7 +268,7 @@ From relationship management
 
 ---
 
-# 15. Positioning
+## 15. Positioning
 
 Value-in-Motion™ is not:
 - a CRM
@@ -283,30 +284,36 @@ It is:
 ---
 
 
-# Value-in-Motion™Architecture Layers
+# II. Value-in-Motion™Architecture
 
-** #1. Experience Layer**
+## 1. Operational Layer
+
+- Experience Layer
 - Slack
 - Email
 - CRM (Salesforce / Planhat)
 
-** #2. Agent Runtime Layer (LangGraph)**
+## 2. Agent Runtime Layer (LangGraph)
+
 - Phase router
 - Conditional gates
 - Loop resolution
 - Risk branching
 
-** #3. Persistence Layer**
+## 3. Persistence Layer
+
 - Account state (Phase, Risk Score, Missing Anchors)
 - Checkpointers
 
-** #4. Observability Layer (LangSmith)**
+## 4. Observability Layer (LangSmith)
+
 - Execution traces
 - Hallucination detection
 - Token cost tracking
 - Regression testing
+  
 
-## Agentic Layers:
+**Agentic Layers**
 
 **Layer 1: Engine**
 - Orchestration
@@ -328,7 +335,7 @@ It is:
 
 ![Value in Motion CSM Autonomous Agent](docs/diagrams/Value%20in%20Motion%E2%84%A2%20CSM%20Autonomous%20Agent.png)
 
-## Stateful Orchestration
+**Stateful Orchestration**
 
 This system moves beyond simple "Trigger -> Action" automation. It uses LangGraph to implement a State Machine. The agent has a "Long-Term Memory" (State) for each account and persists context across days or weeks.
 
