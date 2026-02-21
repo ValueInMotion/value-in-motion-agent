@@ -98,7 +98,7 @@ python -m src.risk_agent.main
 ## System Flow — Risk Detection Agent
 ![My Image](docs/diagrams/risk_agent.png)
 
-### 1. INPUTS — Signals Enter the System
+### #1. INPUTS — Signals Enter the System
 
 **Source**
 - `examples/sample_account.json`
@@ -114,7 +114,7 @@ python -m src.risk_agent.main
 &rarr; Raw customer reality.
 
 
-### 2. VALIDATION — Structured Input
+### #2. VALIDATION — Structured Input
 
 **File:** `schemas.py`
 
@@ -125,7 +125,7 @@ python -m src.risk_agent.main
 &rarr; Turns signals into a trusted state.
 
 
-### 3. DECISION ENGINE — Lifecycle Diagnosis
+### #3. DECISION ENGINE — Lifecycle Diagnosis
 
 **File:** `agent.py`
 
@@ -137,7 +137,7 @@ python -m src.risk_agent.main
 &rarr; This is the deterministic lifecycle brain &rarr;  probabilistic AI
 
 
-### 4. ORCHESTRATION — Execution Runtime
+### #4. ORCHESTRATION — Execution Runtime
 
 **File:** `main.py`
 
@@ -148,7 +148,7 @@ python -m src.risk_agent.main
 &rarr; Orcchestrate Value-in-Motion™ framework
 
 
-### 5. OUTPUT — Decision-Ready Insight
+### #5. OUTPUT — Decision-Ready Insight
 
 === VALUE IN MOTION — RISK AGENT ===
 
@@ -162,7 +162,7 @@ Action: Recovery: exec alignment + value proof plan (14 days)
  
 ---
 
-# Core Architecture
+# 8. Core Architecture
 
 ```mermaid
 flowchart TB
@@ -175,7 +175,7 @@ flowchart TB
   G --> C
   ```
 
-# Lifecycle Model
+# 9. Lifecycle Model
 
 The agent operates against a strict lifecycle state machine:
 
@@ -188,7 +188,7 @@ Risk = friction in one of these phases.
 
 ---
 
-# Lean Philosophy — Zero Waste CS
+# 10. Lean Philosophy — Zero Waste CS
 
 > Applying Lean (Muda, Mura, Muri) to SaaS telemetry:  
 
@@ -202,7 +202,7 @@ Risk = friction in one of these phases.
 
 ---
 
-# Technical Stack (MVP)
+# 11. Technical Stack (MVP)
 
 - **Orchestration:** LangGraph
 - **LLM Layer:** Claude / GPT
@@ -219,7 +219,8 @@ Structured for:
 
 ---
 
-# What Makes It Different
+# 12. What Makes It Different
+
 - Most automation:
 - Linear workflows
 - Static triggers
@@ -237,7 +238,7 @@ Agent = Lifecycle Executor
 
 ---
 
-# MVP Success Criteria
+# 13. MVP Success Criteria
 
 - ≥30% time saved per CSM
 - Renewal brief auto-generated with ≥80% relevance
@@ -246,7 +247,8 @@ Agent = Lifecycle Executor
 - No dropped stakeholder
 
 ---
-# Vision
+
+# 14. Vision
 
 Customer Success today:
 - Reactive
@@ -265,7 +267,7 @@ From relationship management
 
 ---
 
-# Positioning
+# 15. Positioning
 
 Value-in-Motion™ is not:
 - a CRM
@@ -281,24 +283,24 @@ It is:
 ---
 
 
-# 8. Value-in-Motion™Architecture Layers
+# Value-in-Motion™Architecture Layers
 
-**1. Experience Layer**
+** #1. Experience Layer**
 - Slack
 - Email
 - CRM (Salesforce / Planhat)
 
-**2. Agent Runtime Layer (LangGraph)**
+** #2. Agent Runtime Layer (LangGraph)**
 - Phase router
 - Conditional gates
 - Loop resolution
 - Risk branching
 
-**3. Persistence Layer**
+** #3. Persistence Layer**
 - Account state (Phase, Risk Score, Missing Anchors)
 - Checkpointers
 
-**4. Observability Layer (LangSmith)**
+** #4. Observability Layer (LangSmith)**
 - Execution traces
 - Hallucination detection
 - Token cost tracking
