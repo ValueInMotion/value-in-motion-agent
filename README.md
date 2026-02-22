@@ -12,6 +12,13 @@
 
 **An autonomous, lifecycle-aware AI Revenue Operating System for Customer Success.**
 
+**ViM (Value in Motion)** is a closed-loop agentic execution process that turns an outcome goal into actions, learns from results, and keeps iterating until value is delivered.
+
+- **Get the Mission (Objective Function):** This prevents the agent from hallucinating or drifting. By defining "what success looks like" upfront, the agent has a definitive metric to measure its progress against during the final iteration step.
+- **Scan the Scene (Context & RAG):** Agents are only as good as their situational awareness. This step effectively combines memory retrieval, real-time data ingestion, and constraint checking, ensuring the agent doesn't act blindly.
+- **Think It Through (Planning & Reasoning):** This acts as the Chain-of-Thought (CoT) phase. Breaking a large mission into subgoals and identifying the necessary tool calls prevents the agent from attempting to solve complex problems in a single, error-prone leap.
+- **Take Action (Tool Use / Function Calling):** This is where the model connects to the real world. By limiting execution to one concrete step at a time, you minimize the blast radius of potential errors.
+
 Value in Motion™ detects **value friction**, anticipates **risk from day one**, and **orchestrates targeted actions** across the entire customer lifecycle.
 
 It operates in closed loops:
