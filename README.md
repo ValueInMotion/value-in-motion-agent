@@ -1,4 +1,4 @@
-# I. Value-in-Motion™ — Autonomous Lifecycle Engine
+# I. Value-in-Motion™ — Agentic AI Lifecycle Orchestration Engine
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]() 
 [![Platform](https://img.shields.io/badge/platform-Python%20%7C%20Claude-blue)]() 
 [![Framework](https://img.shields.io/badge/framework-LangChain-black)]() 
