@@ -10,8 +10,7 @@
 
 ## 1. What It Is
 
-**Value in Motion is an execution layer for Customer Success**
-**It helps CSMs execute the customer lifecycle with more precision.**
+**Value in Motion is an agentic execution operating system for Customer Success. Adoption creates evidence, evidence validates outcomes, outcomes drive value — and value drives the decision to remediate, renew, or expand. Forty-four governed steps, handoff through renewal.**
 
 **ViM (Value in Motion)** is a closed-loop agentic execution process that turns an outcome goal into actions, learns from results, and keeps iterating until value is delivered.
 
