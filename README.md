@@ -10,7 +10,7 @@
 
 ## 1. What It Is
 
-**Value in Motion is an agentic execution operating system for Customer Success. Adoption creates evidence, evidence validates outcomes, outcomes drive value — and value drives the decision to remediate, renew, or expand. Forty-four governed steps, handoff through renewal.**
+**Value in Motion is an agentic execution operating system for Customer Success. Adoption creates evidence, evidence validates outcomes, outcomes drive value — and value drives the decision to remediate, renew, or expand. Forty-four governed steps, handoff through renewal and expansion.**
 
 **ViM (Value in Motion)** is a closed-loop agentic execution process that turns an outcome goal into actions, learns from results, and keeps iterating until value is delivered.
 
@@ -27,7 +27,103 @@ It operates in closed loops:
 
 > Not a dashboard.  
 > Not a chatbot.  
-> A lifecycle decision and execution engine.  
+> A lifecycle decision and execution engine. 
+
+---
+
+## Operating Model
+
+An operating model in which every Customer Success action is executed as a **governed agentic work unit**, producing evidence as a by-product, so that customer value is continuously measured and every executive decision is made against **proof rather than opinion**.
+
+**4 lifecycle stages · 11 phases · 44 governed execution steps · 6 agentic layers**
+
+### 1 · Unit of Work — the Agentic Work Unit (AWU)
+
+Every execution step is an AWU with four required attributes:
+
+| Attribute | Definition |
+|---|---|
+| **Trigger** | The signal or event that initiates the unit |
+| **Action** | The permitted operation, scoped and bounded |
+| **Owner** | Human, agent, or human-in-the-loop pairing |
+| **Evidence** | The artifact the unit must emit on completion |
+
+Nothing runs undefined. Nothing runs without leaving a trace.
+
+### 2 · Control Plane — Permission Tiers
+
+Each AWU is classified into one of three tiers:
+
+- **`AUTO`** — executes without human intervention
+- **`APPROVAL-REQUIRED`** — executes on human gate
+- **`BLOCKED`** — policy-denied, logged, escalated
+
+**The tier mix is itself a health metric.** Rising `APPROVAL-REQUIRED` indicates trust not yet earned. Rising `BLOCKED` indicates policy misaligned with the work.
+
+### 3 · Evidence Layer — Adoption Becomes Signal
+
+Observability across all 11 phases. Adoption telemetry, risk signals, and outcome attainment are captured as **traces**, not assembled manually at QBR time.
+
+**Primary measure: time-to-audit-evidence** — how fast an outcome can be proven when an executive asks.
+
+### 4 · Decision Layer — the Closing Loop
+
+Measured value routes to one of three executive decisions: **remediate**, **renew**, or **expand**.
+
+The loop is what makes this an operating model rather than a lifecycle diagram: **the output of measurement is a mandated decision, not a report.**
+
+---
+
+## Lifecycle — 4 Stages, 11 Phases
+
+### 1. **Handoff** — 2 phases
+- Internal Transition
+- Predictable Success Profile
+
+### 2. **Onboarding** — 2 phases
+- Customer Kickoff
+- Value Activation
+
+### 3. **Value Realization** — 6 phases
+- Strategic Orchestration
+- Observability & Signals
+- Risk Control
+- Churn Handling
+- Advocacy
+- Value Proof
+
+### 4. **Renewal & Expansion** — 1 phase
+- Renewal & Expansion
+
+---
+
+## The Loop
+
+```mermaid
+flowchart LR
+    A[**Handoff**<br/>context transfers<br/>with intent intact] --> B[**Onboarding**<br/>activation produces<br/>first evidence]
+    B --> C[**Value Realization**<br/>orchestrate · observe<br/>control · prove]
+    C --> D[**Renewal & Expansion**<br/>remediate · renew · expand]
+    D -->|decision becomes<br/>new baseline| A
+```
+
+---
+
+## Framework vs. Operating Model
+
+| Framework | **Value in Motion** |
+|---|---|
+| Describes phases | **Defines execution units** |
+| Assigns owners | **Assigns permission tiers** |
+| Reports on health | **Emits evidence continuously** |
+| Recommends action | **Forces a decision** |
+| Reviewed quarterly | **Runs continuously** |
+
+---
+
+## In One Line
+
+> **It is not a lifecycle map. It is an execution model where the work is governed, the evidence is a by-product of doing the work, and the measurement forces a decision.**
 
 ---
 
