@@ -127,6 +127,12 @@ flowchart LR
 
 ---
 
+## The agentic stack
+
+<img width="1472" height="1560" alt="image" src="https://github.com/user-attachments/assets/de125e0b-ba7c-45d6-b5ae-5b2848b61f53" />
+
+
+----
 ## 2. Why It Matters
 
 Customer Success does not fail due to a lack of data.
