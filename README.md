@@ -127,7 +127,8 @@ flowchart LR
 
 ---
 
-## The agentic stack
+## The Agentic Stack
+**`6 domains · 21 layers`**
 
 <img width="1472" height="1560" alt="image" src="https://github.com/user-attachments/assets/de125e0b-ba7c-45d6-b5ae-5b2848b61f53" />
 
