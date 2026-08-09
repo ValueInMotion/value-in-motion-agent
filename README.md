@@ -10,6 +10,8 @@
 
 ## 1. What It Is
 
+Innovation doesn't come from speed. It comes from velocity — speed with direction. Value flows through two forces: executives set direction, top-down; teams execute, bottom-up. When those two forces align, they create acceleration — velocity in action. That acceleration drives value in three steps: execution (remove friction), adoption (not just usage — the right people driving real value), and business outcome. Direction. Execution. Move the business.
+
 **Value in Motion is an agentic execution operating system for Customer Success. Adoption creates evidence, evidence validates outcomes, outcomes drive value — and value drives the decision to remediate, renew, or expand. Forty-four governed steps, handoff through renewal and expansion.**
 
 **ViM (Value in Motion)** is a closed-loop agentic execution process that turns an outcome goal into actions, learns from results, and keeps iterating until value is delivered.
